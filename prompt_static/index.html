@@ -729,5 +729,17 @@
 </script>
 <!-- 暗色主题切换按钮 -->
 <div id="themeToggleBtn" style="position:fixed;bottom:12px;left:12px;z-index:99999;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;user-select:none;transition:background .15s;" title="切换主题">🌓</div>
+<script>
+// 主题按钮事件绑定（按钮必须在脚本之前存在）
+(function(){
+    var btn = document.getElementById('themeToggleBtn');
+    if (btn) {
+        btn.addEventListener('click', function() {
+            var isDark = document.body.classList.toggle('dark');
+            localStorage.setItem("weilin_prompt_theme", isDark ? 'dark' : 'light');
+        });
+    }
+})();
+</script>
 <script src="/sd-webui-prompt-all-in-one-js"></script>
 </html>
