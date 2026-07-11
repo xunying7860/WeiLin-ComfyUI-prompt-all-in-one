@@ -4,6 +4,66 @@
 
 </div>
 
+# ⚠️ This is a Fork Maintained Version
+
+> **This repository is forked from [weilin9999/WeiLin-ComfyUI-prompt-all-in-one](https://github.com/weilin9999/WeiLin-ComfyUI-prompt-all-in-one)**
+>
+> **The original author archived the repo on 2025-03-24. This fork only does bug fixes and tag library expansion — no new features are added.**
+>
+> For the original author's new node, visit: [WeiLin-Comfyui-Tools](https://github.com/weilin9999/WeiLin-Comfyui-Tools)
+
+---
+
+## Changes vs the Original
+
+### Tag Library Expansion
+- Total tags expanded from ~3,600 to **~5,800+** (~2,200 new tags added)
+- 14 top-level categories, 135+ sub-categories
+- **100% translation rate** (all tags have Chinese display names)
+- All tag names follow `^[a-z][a-z0-9_]*$` format
+
+### Bug Fixes
+- **PromptUI value clearing bug**: Fixed input content being cleared after multiple button clicks (`dispatchEvent(new Event('input', {bubbles: true}))`)
+- **Python 3.13 compatibility**: Fixed `pkg_resources.ImpImporter` crash under embedded Python 3.13 (upgraded setuptools to 81.0.0)
+- **YAML blank-line fix**: The frontend custom YAML parser relies on blank lines to separate sub-categories — restored 139 missing blank lines
+
+### New Category: Prompt Studio
+Added **Prompt Studio** — a new top-level category with 153 ready-to-use prompt presets sourced from [SD-Anima-Prompt-Studio](https://hajimides.github.io/SD-Anima-Prompt-Studio/):
+
+| Sub-category | Presets |
+|:---|---:|
+| Quality | 15 |
+| Style | 10 |
+| Subject | 8 |
+| Character | 6 |
+| Clothing | 21 |
+| Action (Tag) | 10 |
+| Action (Natural Language) | 10 |
+| Perspective | 10 |
+| Composition | 10 |
+| Background | 8 |
+| NSFW Clothing | 15 |
+| NSFW Action (Tag) | 15 |
+| NSFW Action (Natural Language) | 15 |
+
+### PromptUI UI Improvements
+- Added **dark theme toggle** button (bottom-left 🌓)
+- Theme preference persisted via localStorage
+
+---
+
+## Installation
+
+```bash
+cd ComfyUI/custom_nodes/
+git clone https://github.com/xunying7860/WeiLin-ComfyUI-prompt-all-in-one.git
+```
+
+Restart ComfyUI.
+
+---
+
+# Original README Content Below
 
 # Please note that this node no longer accepts any feedback or updates!
 ### This node is no longer updated and will be replaced by a new node. New node: [WeiLin-Comfyui-Tools](https://github.com/weilin9999/WeiLin-Comfyui-Tools) The new node will continue to update and the installation method of the new node is more convenient and better than that of the old node. The new node is not compatible with the old node, but the Tag data of the old node can be migrated to the new node. Please refer to the new node for more information!
