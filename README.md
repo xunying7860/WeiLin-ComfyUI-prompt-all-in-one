@@ -4,6 +4,67 @@
 
 </div>
 
+# ⚠️ 本仓库为分支维护版
+
+> **本仓库 Fork 自 [weilin9999/WeiLin-ComfyUI-prompt-all-in-one](https://github.com/weilin9999/WeiLin-ComfyUI-prompt-all-in-one)**
+>
+> **原作者已于 2025-03-24 归档仓库，本分支仅做 bug 修复和 tag 库扩增，不添加新功能。**
+>
+> 如需原版新节点请前往：[WeiLin-Comfyui-Tools](https://github.com/weilin9999/WeiLin-Comfyui-Tools)
+
+---
+
+## 本分支与原版的差异
+
+### Tag 库扩展
+- tag 总数从 ~3,600 扩展到 **~5,800+**（新增 ~2,200 个 tag）
+- 新增 14 个顶层分类、135+ 子类
+- **100% 翻译率**（全部 tag 有中文显示名）
+- 所有 tag 名遵循 `^[a-z][a-z0-9_]*$` 格式
+
+### Bug 修复
+- **PromptUI 值清空 Bug**：多次点击按钮后输入内容被清空的问题已修复（`dispatchEvent(new Event('input', {bubbles: true}))`）
+- **Python 3.13 兼容**：嵌入式 Python 3.13 环境下 `pkg_resources.ImpImporter` 崩溃问题已修复（setuptools 升级至 81.0.0）
+- **YAML 组间空行修复**：前端的自定义 YAML 解析器依赖空行分割不同子类，补回 139 处缺失空行
+
+### 新增分类：Prompt Studio
+在原版分类基础上新增 **Prompt Studio** 分类，包含 153 组可直接使用的提示词预设，数据来源于 [SD-Anima-Prompt-Studio](https://hajimides.github.io/SD-Anima-Prompt-Studio/)：
+
+| 子类 | 组数 |
+|:---|---:|
+| 质量 | 15 |
+| 风格 | 10 |
+| 主体/人数 | 8 |
+| 人物 | 6 |
+| 服装 | 21 |
+| 动作 Tag | 10 |
+| 动作自然语言 | 10 |
+| 角度 | 10 |
+| 构图 | 10 |
+| 背景 | 8 |
+| NSFW 服装 | 15 |
+| NSFW 动作 Tag | 15 |
+| NSFW 动作自然语言 | 15 |
+
+### PromptUI 界面优化
+- 新增**暗色主题**切换按钮（左下角 🌓）
+- 主题选择持久化存储（localStorage）
+
+---
+
+## 安装
+
+```bash
+cd ComfyUI/custom_nodes/
+git clone https://github.com/xunying7860/WeiLin-ComfyUI-prompt-all-in-one.git
+```
+
+重启 ComfyUI 即可。
+
+---
+
+# 以下为原版 README 内容
+
 # 注意 本节点已不再受理任何反馈和更新！
 ### 本节点已不再更新，新节点会替代本节点，新节点：[WeiLin-Comfyui-Tools](https://github.com/weilin9999/WeiLin-Comfyui-Tools)，新节点会持续更新且新节点比旧节点的安装方式更便捷更好，新节点不兼容旧节点但是旧节点的Tag数据可以迁移到新节点中，详细情况请前往新节点中查看！
 
