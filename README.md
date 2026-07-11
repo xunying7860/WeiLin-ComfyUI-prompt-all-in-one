@@ -4,7 +4,7 @@
 
 </div>
 
-# ⚠️ 本仓库仅做个人维护（我实在喜欢这个版本）
+# ⚠️ 本仓库仅做个人维护
 
 > **本仓库 Fork 自 [weilin9999/WeiLin-ComfyUI-prompt-all-in-one](https://github.com/weilin9999/WeiLin-ComfyUI-prompt-all-in-one)**
 >
