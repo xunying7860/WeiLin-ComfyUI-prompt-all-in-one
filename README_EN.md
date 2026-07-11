@@ -46,10 +46,6 @@ Added **Prompt Studio** — a new top-level category with 153 ready-to-use promp
 | NSFW Action (Tag) | 15 |
 | NSFW Action (Natural Language) | 15 |
 
-### PromptUI UI Improvements
-- Added **dark theme toggle** button (bottom-left 🌓)
-- Theme preference persisted via localStorage
-
 ---
 
 ## Installation
