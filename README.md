@@ -25,10 +25,6 @@
 - **PromptUI 值清空 Bug**：多次点击按钮后输入内容被清空的问题已修复（`dispatchEvent(new Event('input', {bubbles: true}))`）
 - **Python 3.13 兼容**：嵌入式 Python 3.13 环境下 `pkg_resources.ImpImporter` 崩溃问题已修复（setuptools 升级至 81.0.0）
 
-### PromptUI 界面优化
-- 新增**暗色主题**切换按钮（左下角 🌓）
-- 主题选择持久化存储（localStorage）
-
 ---
 
 ## 安装
