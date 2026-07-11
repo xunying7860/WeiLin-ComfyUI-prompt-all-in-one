@@ -704,6 +704,30 @@
         window.top.postMessage({handel: 'nomBoxWeilinPromptBox', randomid: thisRandomId}, "/");
     }
 
+    // 暗色主题切换
+    (function(){
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlTheme = urlParams.get('__theme');
+        const saved = localStorage.getItem("weilin_prompt_theme");
+        const activeTheme = urlTheme || saved || 'light';
+        if (activeTheme === 'dark') {
+            document.body.classList.add('dark');
+        }
+        if (urlTheme && urlTheme !== saved) {
+            localStorage.setItem("weilin_prompt_theme", urlTheme);
+        }
+        const btn = document.getElementById('themeToggleBtn');
+        if (btn) {
+            btn.addEventListener('click', function() {
+                const isDark = document.body.classList.toggle('dark');
+                const theme = isDark ? 'dark' : 'light';
+                localStorage.setItem("weilin_prompt_theme", theme);
+            });
+        }
+    })();
+
 </script>
+<!-- 暗色主题切换按钮 -->
+<div id="themeToggleBtn" style="position:fixed;bottom:12px;left:12px;z-index:99999;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;user-select:none;transition:background .15s;" title="切换主题">🌓</div>
 <script src="/sd-webui-prompt-all-in-one-js"></script>
 </html>
