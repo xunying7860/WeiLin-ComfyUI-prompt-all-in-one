@@ -2,7 +2,26 @@
 import re
 from .sd_webui_prompt_all_in_one_app import launch
 import os
-import pkg_resources
+import sys
+import subprocess
+
+# 兼容性修复：Python 3.13+ 移除了 pkgutil.ImpImporter，
+# 旧版 setuptools (<70) 的 pkg_resources 会因此崩溃。
+# 先检查 setuptools 版本，过旧则自动升级。
+try:
+    import pkg_resources
+except (AttributeError, ImportError) as _pkg_err:
+    print(f"[WeiLin] pkg_resources 导入失败 ({_pkg_err})，尝试升级 setuptools...")
+    try:
+        subprocess.check_call(
+            [sys.executable, "-m", "pip", "install", "--upgrade", "setuptools>=70"],
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+        )
+        import pkg_resources  # type: ignore
+        print("[WeiLin] setuptools 升级成功，pkg_resources 已恢复。")
+    except Exception as _upgrade_err:
+        print(f"[WeiLin] setuptools 自动升级失败 ({_upgrade_err})，部分功能可能不可用。")
+
 import comfy.lora
 import folder_paths
 import comfy.utils
@@ -418,6 +437,7 @@ loraInfoApp()
 # 启动LLM大模型路由
 from .script.llm_server import runLLMServerAPP 
 runLLMServerAPP()
+
 
 
 def copy_folder(source_folder, destination_folder):

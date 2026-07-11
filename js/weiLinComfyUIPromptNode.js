@@ -152,9 +152,11 @@ app.registerExtension({
           {
             if(thisInputElements.g != null){
               thisInputElements.g.value = e.data.g_value
+              thisInputElements.g.dispatchEvent(new Event('input', {bubbles: true})) // 通知 ComfyUI widget 系统值已变更
             }
             if(thisInputElements.n != null){
               thisInputElements.n.value = e.data.n_value
+              thisInputElements.n.dispatchEvent(new Event('input', {bubbles: true})) // 通知 ComfyUI widget 系统值已变更
             }
           }else if(e.data.handel  == 'closeWeilinPromptBox' && e.data.randomid == randomID){
             if(thisInputElements.g != null){
