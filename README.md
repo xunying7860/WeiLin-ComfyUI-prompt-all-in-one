@@ -4,7 +4,7 @@
 
 </div>
 
-# ⚠️ 本仓库为分支维护版
+# ⚠️ 本仓库仅做个人维护（我实在喜欢这个版本）
 
 > **本仓库 Fork 自 [weilin9999/WeiLin-ComfyUI-prompt-all-in-one](https://github.com/weilin9999/WeiLin-ComfyUI-prompt-all-in-one)**
 >
@@ -19,32 +19,11 @@
 ### Tag 库扩展
 - tag 总数从 ~3,600 扩展到 **~5,800+**（新增 ~2,200 个 tag）
 - 新增 14 个顶层分类、135+ 子类
-- **100% 翻译率**（全部 tag 有中文显示名）
-- 所有 tag 名遵循 `^[a-z][a-z0-9_]*$` 格式
+- 所有 tag 名遵循 `^[a-z][a-z0-9_]*$` 格式（如果要导入自己tag库，可按指定格式添加）
 
 ### Bug 修复
 - **PromptUI 值清空 Bug**：多次点击按钮后输入内容被清空的问题已修复（`dispatchEvent(new Event('input', {bubbles: true}))`）
 - **Python 3.13 兼容**：嵌入式 Python 3.13 环境下 `pkg_resources.ImpImporter` 崩溃问题已修复（setuptools 升级至 81.0.0）
-- **YAML 组间空行修复**：前端的自定义 YAML 解析器依赖空行分割不同子类，补回 139 处缺失空行
-
-### 新增分类：Prompt Studio
-在原版分类基础上新增 **Prompt Studio** 分类，包含 153 组可直接使用的提示词预设，数据来源于 [SD-Anima-Prompt-Studio](https://hajimides.github.io/SD-Anima-Prompt-Studio/)：
-
-| 子类 | 组数 |
-|:---|---:|
-| 质量 | 15 |
-| 风格 | 10 |
-| 主体/人数 | 8 |
-| 人物 | 6 |
-| 服装 | 21 |
-| 动作 Tag | 10 |
-| 动作自然语言 | 10 |
-| 角度 | 10 |
-| 构图 | 10 |
-| 背景 | 8 |
-| NSFW 服装 | 15 |
-| NSFW 动作 Tag | 15 |
-| NSFW 动作自然语言 | 15 |
 
 ### PromptUI 界面优化
 - 新增**暗色主题**切换按钮（左下角 🌓）
