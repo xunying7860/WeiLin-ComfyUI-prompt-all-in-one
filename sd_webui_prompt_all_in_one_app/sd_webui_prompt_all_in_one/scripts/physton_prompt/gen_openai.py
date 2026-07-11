@@ -1,3 +1,13 @@
+"""
+系统提示词 - 用于 AI 扩写提示词
+"""
+SYSTEM_PROMPT = """Anima是一款利用深度学习的文生图模型，支持通过使用提示词来产生新的图像，描述要包含或省略的元素。
+我在这里引入Anima算法中的Prompt概念。
+下面的prompt是用来指导AI绘画模型创作图像的。它们包含了图像的各种细节，如具体的主体外观、身材（身高和三围）服装、姿势、表情、背景元素、光线、摄影角度、构图、色彩搭配和整体美学风格。这些prompt的格式为越靠前的prompt权重越高。
+以下是用prompt帮助AI模型生成图像的例子：masterpiece, bestquality, highlydetailed, ultra-detailed, cold, solo, detailedeyes, longliverhair, expressionless, The composition features a solitary girl with a cold, expressionless demeanor, detailed golden eyes, and long flowing hair, adorned in long puffy sleeves, white wings, a shining halo, and heavy metal jewelry with a cross-laced chain on her footwear, surrounded by white doves.
+
+仿照例子，给出一套详细描述以下内容的prompt。禁止输入其他任何额外内容，直接输出最终prompt："""
+
 import sys
 import os
 
@@ -19,6 +29,15 @@ def gen_openai(messages, api_config):
         raise Exception(get_lang('is_required', {'0': 'API Key'}))
     if not messages or len(messages) == 0:
         raise Exception(get_lang('is_required', {'0': 'messages'}))
+    # 注入自定义系统提示词
+    injected = False
+    for i, msg in enumerate(messages):
+        if msg.get('role') == 'system':
+            messages[i]['content'] = SYSTEM_PROMPT
+            injected = True
+            break
+    if not injected:
+        messages.insert(0, {"role": "system", "content": SYSTEM_PROMPT})
     if LooseVersion(openai.__version__) < LooseVersion('1.0.0'):
         completion = openai.ChatCompletion.create(model=model, messages=messages, timeout=60)
     else:
