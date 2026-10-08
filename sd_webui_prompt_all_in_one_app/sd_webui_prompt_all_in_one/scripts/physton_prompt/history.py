@@ -10,8 +10,12 @@ sys.path.append(Path)
 # 改为包限定导入（与 scripts/on_app_started.py 的写法一致），不再依赖 sys.path 顺序。
 try:
     from physton_prompt.storage import Storage
-except ImportError:
-    # 兜底：以 scripts.physton_prompt.* 或裸模块方式加载时仍可用
+except ModuleNotFoundError as _storage_err:
+    # 兜底：只有「physton_prompt 包本身不可导入」（如以裸模块 / scripts.physton_prompt.* 方式加载）才退回裸导入。
+    # 不用 except ImportError：否则 storage.py 内部的真实 ImportError（例如缺 launch 模块）
+    # 会被同名冲突的报错掩盖，排障时看不到真因。
+    if "physton_prompt" not in str(_storage_err):
+        raise
     from storage import Storage
 import uuid
 import time
