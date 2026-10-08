@@ -5,22 +5,22 @@ import os
 import sys
 import subprocess
 
-# 兼容性修复：Python 3.13+ 移除了 pkgutil.ImpImporter，
-# 旧版 setuptools (<70) 的 pkg_resources 会因此崩溃。
-# 先检查 setuptools 版本，过旧则自动升级。
+# 兼容性修复：
+# 1) Python 3.13+ 移除了 pkgutil.ImpImporter，旧版 setuptools(<70) 的 pkg_resources 会因此崩溃；
+# 2) setuptools>=81 直接删除了 pkg_resources，所以「升级 setuptools」永远修不回来
+#    （实测本机 setuptools 84 仍无 pkg_resources，每次启动还白跑一次联网 pip 升级）。
+# 结论：不再依赖 pkg_resources，改用标准库 importlib.metadata 读取已安装版本；
+#      pkg_resources 仅作为旧环境兜底（存在才用，不再尝试联网升级 setuptools）。
 try:
-    import pkg_resources
-except (AttributeError, ImportError) as _pkg_err:
-    print(f"[WeiLin] pkg_resources 导入失败 ({_pkg_err})，尝试升级 setuptools...")
-    try:
-        subprocess.check_call(
-            [sys.executable, "-m", "pip", "install", "--upgrade", "setuptools>=70"],
-            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-        )
-        import pkg_resources  # type: ignore
-        print("[WeiLin] setuptools 升级成功，pkg_resources 已恢复。")
-    except Exception as _upgrade_err:
-        print(f"[WeiLin] setuptools 自动升级失败 ({_upgrade_err})，部分功能可能不可用。")
+    from importlib.metadata import version as _get_pkg_version, PackageNotFoundError as _PkgNotFoundError
+except ImportError:  # Python < 3.8 兜底（正常不会走到）
+    _get_pkg_version = None
+    _PkgNotFoundError = Exception
+
+try:
+    import pkg_resources as _pkg_resources  # noqa: F401
+except (AttributeError, ImportError):
+    _pkg_resources = None
 
 import comfy.lora
 import folder_paths
@@ -405,7 +405,14 @@ def install_requirements(requirements_file_path):
                 package = package.strip()
                 if '==' in package:
                     package_name, package_version = package.split('==')
-                    installed_version = pkg_resources.get_distribution(package_name).version
+                    # 优先用标准库 importlib.metadata（setuptools>=81 已移除 pkg_resources）
+                    if _get_pkg_version is not None:
+                        try:
+                            installed_version = _get_pkg_version(package_name)
+                        except _PkgNotFoundError:
+                            installed_version = None
+                    else:
+                        installed_version = _pkg_resources.get_distribution(package_name).version
                     if installed_version != package_version:
                         launch.run_pip(f"install {package}", f"WeiLinComfyUIPromptAllInOne requirement: changing {package_name} version from {installed_version} to {package_version}")
                 elif not launch.is_installed(dist2package(package)):
