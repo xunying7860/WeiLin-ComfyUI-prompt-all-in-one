@@ -4,9 +4,18 @@ import folder_paths
 import os
 import json
 import re
+import asyncio
 import hashlib
 import requests
 from datetime import datetime
+from functools import partial
+
+# [P1-2] lora 采样指纹索引：全文件 sha256 -> 3MB 采样指纹 + SQLite/内存双缓存。
+# 模块缺失时退回旧的 _get_sha256_hash 全文件算法，不影响插件加载。
+try:
+    from .lora_index import get_file_hash as _lora_get_file_hash
+except Exception:
+    _lora_get_file_hash = None
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 USERDATA = os.path.join(THIS_DIR, '..', 'loras_userdata')
@@ -302,22 +311,27 @@ async def get_model_info(file: str,
   should_fetch_metadata = force_fetch_metadata is True or (maybe_fetch_metadata is True and
                                                            ('metadata' not in info_data['raw'] or len(info_data['raw']['metadata']) == 0))
 
+  # [P1-3] _get_model_metadata / _get_model_civitai_data 内部是同步阻塞 IO
+  # （读文件头/全文件 sha256/requests 打 civitai），本协程跑在 aiohttp 事件
+  # 循环里，必须丢线程池执行，否则整个 ComfyUI 卡死。
+  loop = asyncio.get_running_loop()
+
   if should_fetch_metadata:
-    data_meta = _get_model_metadata(file,
-                                    model_type=model_type,
-                                    default={},
-                                    refresh=force_fetch_metadata)
+    data_meta = await loop.run_in_executor(None, partial(
+        _get_model_metadata, file, model_type=model_type, default={},
+        refresh=force_fetch_metadata))
     should_save = _merge_metadata(info_data, data_meta) or should_save
 
   if should_fetch_civitai:
-    data_civitai = _get_model_civitai_data(file,
-                                           model_type=model_type,
-                                           default={},
-                                           refresh=force_fetch_civitai)
+    data_civitai = await loop.run_in_executor(None, partial(
+        _get_model_civitai_data, file, model_type=model_type, default={},
+        refresh=force_fetch_civitai))
     should_save = _merge_civitai_data(info_data, data_civitai) or should_save
 
   if 'sha256' not in info_data:
-    file_hash = _get_sha256_hash(file_path)
+    # [P1-2] 展示用途的哈希：3MB 采样指纹（微秒级进程内缓存 + sqlite），
+    # 不再全文件 sha256。真正要精确值的 civitai/clear 路径各自走 exact=True。
+    file_hash = _get_file_hash_safe(file_path)
     if file_hash is not None:
       info_data['sha256'] = file_hash
       should_save = True
@@ -469,9 +483,12 @@ def _merge_civitai_data(info_data: dict, data_civitai: dict) -> bool:
 
 
 def _get_model_civitai_data(file: str, model_type="loras", default=None, refresh=False):
-  """Gets the civitai data, either cached from the user directory, or from civitai api."""
-  file_hash = _get_sha256_hash(get_folder_path(file, model_type))
-  if file_hash is None:
+  """Gets the civitai data, either cached from the user directory, or from civitai api.
+  [P1-2/P1-3] 本函数是同步阻塞函数，只允许在线程池里跑（get_model_info 已用
+  run_in_executor 包好）：civitai 的 by-hash 接口要求精确 sha256，这里取
+  exact=True（结果有 SQLite/内存双缓存，重启后不再重算）。"""
+  file_hash = _get_file_hash_safe(get_folder_path(file, model_type), exact=True)
+  if not file_hash:
     return None
 
   json_file_path = _get_info_cache_file(file_hash, 'civitai')
@@ -480,7 +497,9 @@ def _get_model_civitai_data(file: str, model_type="loras", default=None, refresh
   file_data = read_userdata_json(json_file_path)
   if file_data is None or refresh is True:
     try:
-      response = requests.get(api_url, timeout=5000)
+      # [B8] 原 timeout=5000 单位是「秒」（≈83 分钟），网络不通时线程被挂死；
+      # 改为 10 秒（连接+读取总上限）。
+      response = requests.get(api_url, timeout=10)
       data = response.json()
       save_userdata_json(json_file_path, {
         'url': api_url,
@@ -498,10 +517,13 @@ def _get_model_civitai_data(file: str, model_type="loras", default=None, refresh
 
 
 def _get_model_metadata(file: str, model_type="loras", default=None, refresh=False):
-  """Gets the metadata from the file itself."""
+  """Gets the metadata from the file itself.
+  [P1-2] 这里哈希只用作本地缓存 key（读的是文件头 metadata，不是 by-hash
+  接口），用采样指纹即可，无需全文件 sha256。同步阻塞函数，同样只允许
+  线程池里跑（get_model_info 已包 run_in_executor）。"""
   file_path = get_folder_path(file, model_type)
-  file_hash = _get_sha256_hash(file_path)
-  if file_hash is None:
+  file_hash = _get_file_hash_safe(file_path)
+  if not file_hash:
     return default
 
   json_file_path = _get_info_cache_file(file_hash, 'metadata')
@@ -577,6 +599,22 @@ def _get_sha256_hash(file_path: str):
   return file_hash
 
 
+def _get_file_hash_safe(file_path: str, exact: bool = False):
+  """
+  [P1-2] _get_sha256_hash 的替代品（阻塞纯函数，给线程池/直调用）。
+  exact=False -> lora_index 采样指纹（读 3MB，事件循环里直调可接受）；
+  exact=True  -> 精确 sha256（供 civitai by-hash，调用方必须 run_in_executor）。
+  lora_index 不可用时退回旧的全文件 sha256 算法，行为不劣于原实现。
+  文件不存在 / path 为 None -> 返回 None（与旧签名一致）。
+  """
+  if not file_path or not path_exists(file_path):
+    return None
+  if _lora_get_file_hash is not None:
+    h = _lora_get_file_hash(file_path, exact=exact)
+    return h or None
+  return _get_sha256_hash(file_path)
+
+
 async def set_model_info_partial(file: str, info_data_partial, model_type="loras"):
   """Sets partial data into the existing model info data."""
   info_data = await get_model_info(file, model_type=model_type, default={})
@@ -650,13 +688,21 @@ async def delete_model_info(file: str,
     if os.path.isfile(try_info_path):
       os.remove(try_info_path)
   if del_civitai or del_metadata:
-    file_hash = _get_sha256_hash(file_path)
+    # [P1-3] 指纹计算是同步阻塞 IO（civitai 缓存 key 需精确 sha256，可能读
+    # 整库），事件循环里必须 run_in_executor。元数据缓存 key 历史上先后是
+    # 「全文件 sha256」和「采样指纹」两种，两个 key 的缓存文件都删干净。
+    loop = asyncio.get_running_loop()
+    fp_hash = await loop.run_in_executor(None, partial(_get_file_hash_safe, file_path))
+    sha_hash = await loop.run_in_executor(None, partial(_get_file_hash_safe, file_path, exact=True))
     if del_civitai:
-      json_file_path = _get_info_cache_file(file_hash, 'civitai')
+      json_file_path = _get_info_cache_file(sha_hash, 'civitai')
       delete_userdata_file(json_file_path)
     if del_metadata:
-      json_file_path = _get_info_cache_file(file_hash, 'metadata')
-      delete_userdata_file(json_file_path)
+      for meta_hash in {fp_hash, sha_hash}:
+        if not meta_hash:
+          continue
+        json_file_path = _get_info_cache_file(meta_hash, 'metadata')
+        delete_userdata_file(json_file_path)
 
 
 def delete_userdata_file(rel_path: str):
