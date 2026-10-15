@@ -41,7 +41,9 @@ def get_llm_packages_state():
             'package': package,
             'state': False
         }
-        if launch.is_module_installed("llama_cpp"):
+        # [P0-6] is_module_installed 每次起子进程实测 28ms；find_spec 进程内查询约 0.0003ms（方案A6）
+        import importlib.util
+        if importlib.util.find_spec("llama_cpp") is not None:
             item['state'] = True
 
         states.append(item)

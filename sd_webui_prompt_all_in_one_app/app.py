@@ -4,9 +4,7 @@ import os
 AIO_PATH = os.path.join(os.path.dirname(__file__), "sd_webui_prompt_all_in_one")
 sys.path.append(AIO_PATH)
 
-import gradio as gr
-from gradio import Blocks
-from typing import Optional, Dict, Any
+# [P0-1] 移除 gradio 导入：ComfyUI 环境里它只用于一个类型注解，冷 import ~1-3s 每次启动都付（方案A3）
 from server import PromptServer
 from aiohttp import web
 from .sd_webui_prompt_all_in_one.scripts.on_app_started import on_app_started
@@ -15,7 +13,9 @@ from .install import run_install
 def app_start():
 
     # 安装依赖
-    run_install()
+    # [P0-2] 丢后台线程 + install.py 内 .installed 标记：启动不再等子进程（方案A1）
+    import threading
+    threading.Thread(target=run_install, name="weilin-install", daemon=True).start()
 
     static_path = os.path.join(os.path.dirname(__file__), "../prompt_static/")
     dir = os.path.join(os.path.dirname(__file__), "../prompt_js/")

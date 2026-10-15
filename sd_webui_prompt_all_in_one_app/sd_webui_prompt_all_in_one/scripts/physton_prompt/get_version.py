@@ -71,7 +71,7 @@ def get_git_remote_versions(page=1, per_page=100, filter_update_readme=False):
         try:
             api_url += f'?page={page}&per_page={per_page}'
             key = hashlib.md5(api_url.encode('utf-8')).hexdigest()
-            response = requests.get(api_url)
+            response = requests.get(api_url, timeout=5)  # [P0-5] 原无超时，GitHub 不通时挂事件循环（方案B7）
             versions = _handle_versions(response, filter_update_readme)
             return versions
         except Exception as e:

@@ -5,21 +5,11 @@ sys.path.append(appendPath)
 
 import launch
 
+# [P0-2] 启动期只自动装 tqdm。其余包（openai/boto3/aliyun SDK/execjs/lxml/pathos 等）在插件里全部是
+# 惰性 import（实测：chardet/openai/boto3 均在函数内导入，translators 包无人引用），
+# 改由设置界面「安装」按钮按需安装（install_package 路由），不再启动时联网装大包。
 packages = {
-    "chardet": "chardet",
-    "fastapi": "fastapi",
-    "execjs": "PyExecJS",
-    "lxml": "lxml",
     "tqdm": "tqdm",
-    "pathos": "pathos",
-    "cryptography": "cryptography",
-
-    # The following packages are required for translation service. If you do not need translation service, you can remove them.
-    # 以下是翻译所需的包，如果不需要翻译服务，可以删除掉它们。
-    "openai": "openai",
-    "boto3": "boto3",
-    "aliyunsdkcore": "aliyun-python-sdk-core",
-    "aliyunsdkalimt": "aliyun-python-sdk-alimt",
 }
 
 if __name__ == "__main__":

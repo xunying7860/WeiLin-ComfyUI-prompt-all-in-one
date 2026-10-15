@@ -1,4 +1,4 @@
-import gradio as gr
+# [P0-1] 移除 gradio 导入（原先仅供 on_app_started 的类型注解使用，冷 import 1~3s）
 import os
 import sys
 from pathlib import Path
@@ -70,7 +70,7 @@ except Exception as e:
     pass
 
 
-def on_app_started(_: gr.Blocks):
+def on_app_started(*_args):
     st = Storage()
     hi = History()
     localLLMTransaltor=None

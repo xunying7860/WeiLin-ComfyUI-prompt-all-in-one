@@ -1,2 +1,2 @@
-gradio
+PyYAML
 ruamel.yaml

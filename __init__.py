@@ -29,6 +29,13 @@ import logging
 import re
 import locale
 import shutil
+import threading
+import time as _time
+
+# [P0计时] 插件启动各阶段耗时打点，用于优化前后对比（方案§5）
+_T0 = _time.perf_counter()
+def _mark(what):
+    print(f"[WeiLin] {what}: {(_time.perf_counter() - _T0) * 1000:.0f} ms")
 
 
 # 正向提示词 STRING
@@ -394,6 +401,7 @@ def dist2package(dist: str):
     return ({
         "gradio": "gradio",
         "ruamel.yaml": "ruamel.yaml",
+        "PyYAML": "yaml",  # [P0] PyYAML 的导入名是 yaml，不映射会每次误判缺失触发 pip
     }).get(dist, dist)
 
 
@@ -423,27 +431,33 @@ def install_requirements(requirements_file_path):
 
 
 #安装原APP依赖
-print('WeiLinComfyUIPromptAllInOne 请求安装依赖中.......')
+# [P0-3] 依赖安装挪到后台守护线程：首次启动缺依赖不再卡住 ComfyUI 导入（方案P0-3）
+print('WeiLinComfyUIPromptAllInOne 后台安装依赖中.......')
 loadErr = 0
-try:
-    install_requirements(req_path)
-except:
-    loadErr = 1
-    print('WeiLinComfyUIPromptAllInOne 请求安装依赖失败 =======')
-if loadErr == 0:
-    print('WeiLinComfyUIPromptAllInOne 请求安装依赖成功 =======')
+def _bg_install_requirements():
+    global loadErr
+    try:
+        install_requirements(req_path)
+        print('WeiLinComfyUIPromptAllInOne 请求安装依赖成功 =======')
+    except:
+        loadErr = 1
+        print('WeiLinComfyUIPromptAllInOne 请求安装依赖失败 =======')
+threading.Thread(target=_bg_install_requirements, name="weilin-req", daemon=True).start()
 
 
 # 启动原APP
 from .sd_webui_prompt_all_in_one_app.app import app_start
 app_start()
+_mark("app_start")
 
 # 启动LoraInfo路由
 from .script.lorainfo import loraInfoApp
 loraInfoApp()
+_mark("loraInfoApp")
 # 启动LLM大模型路由
 from .script.llm_server import runLLMServerAPP 
 runLLMServerAPP()
+_mark("runLLMServerAPP")
 
 
 
@@ -488,7 +502,20 @@ NODE_CLASS_MAPPINGS = {
 NODE_DISPLAY_NAME_MAPPINGS = {}
 
 # 检测系统语言
-localLan = locale.getdefaultlocale()[0]
+# [P0-4] locale.getdefaultlocale() 在 Python 3.13 已移除，改 getlocale + Windows API 兜底
+try:
+    localLan = locale.getlocale()[0]
+except Exception:
+    localLan = None
+if localLan is None:
+    try:
+        import ctypes
+        localLan = "zh_CN" if ctypes.windll.kernel32.GetUserDefaultUILanguage() == 0x0804 else "en_US"
+    except Exception:
+        localLan = "en_US"
+if localLan is None:
+    localLan = "en_US"
+
 if localLan == "zh_CN":
     NODE_DISPLAY_NAME_MAPPINGS = {
         "WeiLinPromptToString": "WeiLin 二合一提示词转String",
@@ -509,3 +536,16 @@ else:
 WEB_DIRECTORY = "./js"
 
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
+
+# [P1-2] 后台预热 lora 采样指纹（lora_index 缺失时静默跳过，不影响启动）
+try:
+    from .script.lora_index import warmup_loras_background, init as _lora_init
+    _lora_init(os.path.join(os.path.dirname(__file__), "lora_userdata"))
+    warmup_loras_background([folder_paths.get_full_path("loras", f)
+                             for f in folder_paths.get_filename_list("loras")])
+    _mark("lora warmup dispatched")
+except ImportError:
+    pass
+except Exception as _e:
+    print(f"[WeiLin] lora warmup skipped: {_e}")
+_mark("插件导入完成(总计)")
