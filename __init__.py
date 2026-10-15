@@ -399,9 +399,8 @@ req_path = os.path.join(base_path,"requirements.txt")
 
 def dist2package(dist: str):
     return ({
-        "gradio": "gradio",
-        "ruamel.yaml": "ruamel.yaml",
         "PyYAML": "yaml",  # [P0] PyYAML 的导入名是 yaml，不映射会每次误判缺失触发 pip
+        # gradio/ruamel.yaml 已从 requirements 移除，对应死映射一并删除
     }).get(dist, dist)
 
 
