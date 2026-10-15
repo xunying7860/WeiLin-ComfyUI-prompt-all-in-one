@@ -3,3 +3,7 @@
 __pycache__
 **/*.exe
 /loras_userdata/info
+__pycache__/
+*.pyc
+sd_webui_prompt_all_in_one_app/.installed
+lora_userdata/
