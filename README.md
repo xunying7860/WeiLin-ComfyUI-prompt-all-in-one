@@ -25,6 +25,31 @@
 - **PromptUI 值清空 Bug**：多次点击按钮后输入内容被清空的问题已修复（`dispatchEvent(new Event('input', {bubbles: true}))`）
 - **Python 3.13 兼容**：嵌入式 Python 3.13 环境下 `pkg_resources.ImpImporter` 崩溃问题已修复（setuptools 升级至 81.0.0）
 
+### 性能优化（2026-10-15）
+
+针对「插件一处慢、整个 ComfyUI 跟着卡」的架构问题做了三层优化（P0 启动 / P1 运行期 / P2 传输），核心思路：同步阻塞调用全部移出事件循环、加缓存、传输加 gzip+ETag。本机实测（ComfyUI 0.40 / RTX 3080）：
+
+| 指标 | 优化前 | 优化后 |
+| --- | --- | --- |
+| 插件启动导入 | 7.1 秒 | 0.3~0.5 秒（降约 96%） |
+| tag 库读取（228 KB） | 每请求重新解析 619 ms | 冷 3.2 ms / 热 0.01 ms |
+| 修改一个 tag | 966 ms，同步卡死整个界面 | 47~477 ms，异步不冻结界面 |
+| 最大 Lora（2250 MB）哈希 | 全文件 sha256 3.6~7.3 秒 | 采样指纹 7~40 ms，进程内复用 0.2 ms |
+| Lora 面板接口（151 个） | 逐个全文件哈希+封面重算 | 137~181 ms；响应 139 KB → gzip 8 KB |
+| 前端 JS 包 | 736 KB 明文，每次刷新重传 | gzip 228 KB，复访 HTTP 304 零传输 |
+| get_config 接口 | 415 KB | gzip 后 67 KB |
+| 补全词库（1.78 MB） | `no-store` 每次强制重下 | ETag + 7 天缓存，复访 304 |
+| 151 个 Lora 指纹预热 | 无预热，首次打开反复计算 | 后台预热，首轮后落盘，重启命中仅 0.5 秒 |
+| civitai 请求超时 | `timeout=5000`（单位是秒，≈83 分钟） | 10 秒快速失败 |
+
+主要改动：
+
+- **启动**：`import gradio`（约 3 秒，仅为一个类型注解）从导入链移除；requirements 依赖改为后台线程安装；`install.py` 子进程只跑一次并写 `.installed` 标记（删除该文件可强制重装一轮）；启动依赖清单精简为 tqdm，翻译 SDK 改由设置界面按需安装。
+- **运行期**：`get_group_tags` 改用 PyYAML（libyaml C 实现）+ 1 秒 TTL 快照缓存，写路径协程化丢线程池并原子替换（`os.replace`）；新增 `script/lora_index.py`，Lora 校验由全文件 sha256 改为 3 MB 采样指纹，带内存 + `lora_userdata/lora_index.sqlite3` 持久缓存（civitai by-hash 仍用精确 sha256）；`get_extra_networks` 去除「线程池里套 asyncio.run」反模式，改真 async 并发，封面缩略图按文件指纹缓存；所有阻塞 IO 移出事件循环。
+- **传输**：新增 `sd_webui_prompt_all_in_one_app/web_perf.py` 响应层（`on_response_prepare` 挂 gzip / ETag / Cache-Control），js 打包结果按 mtime 缓存。
+- **兼容**：Python 3.13 下 `locale.getdefaultlocale()` 已移除，改为 `getlocale` + Windows API 兜底；`llama_cpp` 探测由子进程改 `importlib.util.find_spec`。
+- **注意**：tag 库写回改用 PyYAML dump——如手工在 `group_tags/*.yaml` 中写注释，一次插件内改动后注释会丢失（数据本身无损）；展示字段 `sha256` 在仅有本地元数据时现为采样指纹。
+
 ---
 
 ## 安装

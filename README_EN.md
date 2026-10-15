@@ -27,6 +27,27 @@
 - **Python 3.13 compatibility**: Fixed `pkg_resources.ImpImporter` crash under embedded Python 3.13 (upgraded setuptools to 81.0.0)
 - **YAML blank-line fix**: The frontend custom YAML parser relies on blank lines to separate sub-categories — restored 139 missing blank lines
 
+### Performance Overhaul (2026-10-15)
+
+Three-layer rework (P0 startup / P1 runtime / P2 transport) targeting the root cause: slow sync calls blocking ComfyUI's single event loop. All blocking IO moved to worker threads, caching added, responses now gzip + ETag. Measured locally (ComfyUI 0.40 / RTX 3080):
+
+| Metric | Before | After |
+| --- | --- | --- |
+| Plugin import at startup | 7.1 s | 0.3–0.5 s (≈96% less) |
+| Tag library read (228 KB) | 619 ms per request | 3.2 ms cold / 0.01 ms hot |
+| Edit one tag | 966 ms, freezes whole UI | 47–477 ms, never freezes UI |
+| Hash of largest Lora (2250 MB) | full-file sha256, 3.6–7.3 s | sampled fingerprint 7–40 ms, 0.2 ms in-process reuse |
+| Lora panel API (151 items) | per-file full hash, blocks UI | 137–181 ms; response 139 KB → 8 KB gzip |
+| Front-end JS bundle | 736 KB plaintext, re-sent on every reload | 228 KB gzip, HTTP 304 on revisit |
+| get_config | 415 KB | 67 KB gzip |
+| Autocomplete dict (1.78 MB) | `no-store`, re-downloaded every time | ETag + 7-day cache, 304 on revisit |
+| Lora fingerprint warmup (151) | none, recomputed on first open | background warmup, persistent sqlite cache (0.5 s after restart) |
+| civitai request timeout | `timeout=5000` (seconds — ≈83 min) | 10 s fast-fail |
+
+Key changes: dropped the `import gradio` from the import chain (~3 s for one type hint); dependency install moved to a background thread with a one-shot `.installed` flag (delete the file to force reinstall); `get_group_tags` now uses PyYAML (libyaml C loader) with a 1 s TTL snapshot cache and atomic writes off the event loop; new `script/lora_index.py` replaces full-file sha256 with a 3 MB sample fingerprint backed by an in-memory + SQLite persistent cache (exact sha256 kept for civitai lookups); `get_extra_networks` rewritten as true async concurrency; new `web_perf.py` response layer adds gzip / ETag / Cache-Control globally.
+
+Caveats: tag YAML files are rewritten with PyYAML dump — hand-written comments in `group_tags/*.yaml` are lost after an in-plugin edit (data itself is untouched); the displayed `sha256` field is the sample fingerprint when only local metadata exists.
+
 ### New Category: Prompt Studio
 Added **Prompt Studio** — a new top-level category with 153 ready-to-use prompt presets sourced from [SD-Anima-Prompt-Studio](https://hajimides.github.io/SD-Anima-Prompt-Studio/):
 
