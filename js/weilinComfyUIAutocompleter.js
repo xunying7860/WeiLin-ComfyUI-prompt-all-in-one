@@ -83,7 +83,7 @@ function parseCSV(csvText) {
 }
 
 async function getCustomWords() {
-	const resp = await api.fetchApi("/weilin/autocomplete", { cache: "no-store" });
+	const resp = await api.fetchApi("/weilin/autocomplete");
 	if (resp.status === 200) {
 		return await resp.text();
 	}
@@ -530,7 +530,7 @@ app.registerExtension({
 			} catch (error) {}
 
 			if (!loras?.length) {
-				loras = await api.fetchApi("/weilin/autocomplete/loras", { cache: "no-store" }).then((res) => res.json());
+				loras = await api.fetchApi("/weilin/autocomplete/loras").then((res) => res.json());
 			}
 
 			const words = {};

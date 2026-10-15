@@ -33,9 +33,24 @@ def get_metadata(filepath):
 def runApp():
     @PromptServer.instance.routes.get("/weilin/autocomplete")
     async def get_autocomplete(request):
-        if os.path.isfile(file):
-            return web.FileResponse(file)
-        return web.Response(status=404)
+        if not os.path.isfile(file):
+            return web.Response(status=404)
+
+        # [P2-1] 给 1.78MB 的 autocomplete.txt 加 mtime+size 的 ETag + 一周强缓存：
+        #  - 首次加载后浏览器缓存该文件；后续请求带 If-None-Match，命中则 304，零传输。
+        #  - ETag 值与 aiohttp FileResponse 内部使用的格式保持一致（mtime_ns/size 的十六进制，
+        #    形如 "1a2b3c-4d5e"），否则 FileResponse 在 prepare 时会用自身 ETag 覆盖本头，
+        #    导致本函数的 304 分支永远命中不到、且对外暴露的 ETag 前后不一致。
+        st = os.stat(file)
+        etag = '"%x-%x"' % (st.st_mtime_ns, st.st_size)
+        cache_headers = {
+            "ETag": etag,
+            "Cache-Control": "public, max-age=604800",  # 7 天
+        }
+        if request.headers.get("If-None-Match") == etag:
+            # 内容未变：304，不回 body（返回内容本身保持不变）
+            return web.Response(status=304, headers=cache_headers)
+        return web.FileResponse(file, headers=cache_headers)
 
 
     @PromptServer.instance.routes.post("/weilin/autocomplete")
