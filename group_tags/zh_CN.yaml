@@ -34,7 +34,6 @@
       age_difference: 年龄差
       fat_man: 胖男
       femboy: 伪娘
-      group_sex: 群交
       height_difference: 身高差
       hetero: 异性
       multiple_boys: 多男
@@ -159,7 +158,6 @@
       centaur: 半人马
       slime_musume: 史莱姆娘
       spider_girl: 蜘蛛娘
-      dominatrix: 女王(SM中)
       mecha: 机甲
       mecha_musume: 机甲娘
       humanoid_robot_: 类人机器人
@@ -246,7 +244,6 @@
       oil: 油性
       blue_skin: 蓝皮肤
       colored_skin: 彩色皮肤
-      foreskin: 包皮
       glossy_skin: 亮泽皮肤
       grey_skin: 灰皮肤
       luminescent_skin: 发光皮肤
@@ -352,7 +349,6 @@
       hime cut: 公主切
       absurdly_long_hair: 离谱长发
       braid: 辫子
-      female_pubic_hair: 女性阴毛
       floating_hair: 飘浮发
       fluffy_hair: 蓬松发
       gradient_hair: 渐变发
@@ -370,7 +366,6 @@
       side_ponytail: 侧马尾
       sidelocks: 鬓发
       split_bangs: 分开的刘海
-      stray_pubic_hair: 散乱阴毛
       twin_tails: 双马尾
       crossed bangs: 交叉刘海
       bangs: 刘海
@@ -460,7 +455,6 @@
       scratches: 抓痕
       shark_girl: 鲨鱼娘
       single_mechanical_arm: 单机械臂
-      slap_mark: 掌印
       slime_body: 史莱姆身体
       spiked_halo: 尖刺光环
       stitched_arm: 缝合手臂
@@ -696,7 +690,6 @@
       medical_eyepatch: 医用眼罩
       no_blindfold: 去掉了(原设有的)蒙眼要素
       no_eyepatch: 去掉了(原设有的)眼罩
-      ahegao: 阿嘿颜
 
   - name: 瞳孔
     color: rgba(255, 123, 2, .4)
@@ -767,15 +760,12 @@
       close_mouth: 闭嘴
       dot_mouth: 点嘴
       no_mouth: 没有嘴
-      gag: 堵嘴
       gnaw: 啃
       :3: 猫嘴
       :o: 张嘴
       :>: V嘴
       parted_lips: 嘴唇张开
-      bit_gag: 勒住嘴
       chestnut_mouth: 栗子嘴
-      cleave_gag: 被封住嘴
       closed_mouth: 闭着的嘴
       covered_mouth: 蒙住的嘴
       extra_mouth: 有多张嘴巴
@@ -785,7 +775,6 @@
       lips: 嘴唇
       mouth: 嘴
       mouth_hold: 用嘴叼着
-      oral: 用嘴
       pacifier: 奶嘴
       Pouted lips: 撅起的嘴唇
       sideways_mouth: 把嘴画在侧脸
@@ -823,7 +812,6 @@
       ;p: 眨眼舌头上伸
       french_kiss: 舌吻|法式湿吻
       long_tongue: 长舌头
-      oral_invitation: 迎接射精而伸出舌头
       tongue: 舌头
       tongue_out: 吐舌头
       uvula: 小舌头|口盖垂|悬雍垂
@@ -870,50 +858,9 @@
       sagging_breasts: 下垂乳
       veiny_breasts: 青筋乳房
       cleavage: 乳沟
-      areola: 乳晕
-      nipples: 乳头
       pectorals: 胸肌
       large_pectorals: 大胸肌
       unbuttoned clothes: 半露前胸
-      dark_nipples: 深色乳头
-      long_nipples: 长乳头
-      nipple_bar: 乳头棒
-      nipple_piercings: 乳头穿刺
-      nipple_rings: 乳头环
-      pussy: 小穴
-      dark_pussy: 深色小穴
-      puffy_pussy: 肿胀小穴
-      erection: 勃起
-      flaccid: 疲软
-      penis_and_vagina: 阴茎和阴道
-      veiny_penis: 青筋阴茎
-      huge_penis: 巨根
-      gigantic_penis: 超巨根
-      mini_penis: 迷你阴茎
-      small_penis: 小阴茎
-      tiny_penis: 微小阴茎
-      very_big_penis: 非常大阴茎
-      huge_testicles: 巨大睾丸
-      long_testicles: 长睾丸
-      clitoral_hood: 阴蒂包皮
-      clitoris_rings: 阴蒂环
-      erect_clitoris: 勃起阴蒂
-      huge_clitoris: 巨大阴蒂
-      pierced_clitoris: 穿刺阴蒂
-      dark_anus: 深色肛门
-      puffy_anus: 肿胀肛门
-      urethra: 尿道
-      phimosis: 包茎
-      cleft_of_venus: 维纳斯裂口
-      butt_crack: 股沟
-      ass_visible_through_thighs: 大腿间露臀
-      red_ass: 红臀
-      sideboob: 侧乳
-      underboob: 下乳
-      large_areolae: 大乳晕
-      pink_areolae: 粉色乳晕
-      crotch_tattoo: 胯部纹身
-      pubic_tattoo: 阴部纹身
 
   - name: 腰部
     color: rgba(255, 123, 2, .4)
@@ -929,7 +876,6 @@
       absolute_territory: 腹肌
       inflation: 隆起的腹部
       navel: 肚脐
-      groin: 腹股沟
       pregnant: 怀孕
 
   - name: 翅膀
@@ -1151,12 +1097,9 @@
       impossible_swimsuit: 人体彩绘般的泳衣
       bikini_top: 只穿着比基尼上衣
       bikini_top_only: 仅比基尼上衣
-      bikini_top_removed: 脱下了比基尼上衣
       bikini_bottom_only: 仅比基尼下装
       bikini_bottom: 比基尼泳裤
       untied_bikini: 解开的比基尼
-      bikini_aside: 从三点剥开的比基尼
-      swimsuit_aside: 把泳衣的裆部挪到一边
       swimsuit_under_clothes: 衣服里面穿着泳衣
       torn_swimsuit: 破损的泳衣
       bikini_skirt: 比基尼裙
@@ -1301,7 +1244,6 @@
       oversized_clothes: 过大号的衣服
       oversized_shirt: 过大号衬衫
       borrowed_garments: 男友的衣服
-      strap_slip: 衣物吊带滑落(导致走光)
       wet_shirt: 湿衬衫
       clothes_theft: 偷衣服
       brown_vest: 棕色马甲
@@ -1386,51 +1328,22 @@
       harness: 背带；挽具
       rigging: 舰装
       aiguillette: 肩带
-      areola_slip: 乳晕滑出
-      areolae_slip: 乳晕滑出
       ballet_slippers: 芭蕾拖鞋，芭蕾舞者
-      bare_ass: 露臀
       black_panties: 脸红
       bodysuit: 乳胶，连体衣
-      bottomless: 真空
-      bra_pull: 拉胸罩
-      breast_curtains: 乳帘
-      breasts_out: 乳房露出
-      clothes_lift_by_self: 脱衣，自己掀衣
       clothes_pull_by_self: 自己拉衣服
-      clothes_slip: 衣滑落
-      completely_nude: 全裸
-      covering_breasts: 遮胸
       downblouse: 俯视乳沟
       feather_boa: 羽毛围巾
-      gradually_undressing: 逐渐脱衣
       loose_clothes: 宽松衣服
-      nude: 开和服，裸体，无内裤
-      nude_modeling: 裸体模特
-      one_breast_out: 单乳露出
       pant_suit: 裤装
-      panties_aside: 内裤拨到一边
-      panties_on_penis: 内裤套阴茎，穿过内裤射精
-      panties_pulled: 内裤拉下
-      panty_shot: 内裤走光
-      partially_undressed: 半脱
       shawl: 披肩
       shirt_lift_by_self: 自己掀衣
       shoulder_bag: 单肩包
-      sideboob: 侧乳
-      sideboobs: 侧乳
-      skirt_lift_by_self: 自己掀裙
       skirt_lift_by_wind: 风掀裙
-      topless: 露胸
-      underwear_held_up: 举着内衣
-      unworn_panties: 未穿内裤
       lingerie_under_clothes: 衣服下的内衣
-      naked_apron: 裸体围裙
       reverse_bunnysuit: 反穿兔女郎装
-      ball_gag: 口球
       blindfold: 眼罩
       duct_tape: 胶带
-      tail_plug: 尾巴肛塞
       facial_mask: 面具
 
   - name: 腰部
@@ -1579,7 +1492,6 @@
       dolphin_shorts: 海豚短褲(真理褲)
       dolfin_shorts: 海豚短褲(真理褲)
       tight_pants: 紧身裤/运动裤
-      crotchless_pants: 无裆裤（紧身）
       track_pants: 运动裤
       yoga_pants: 瑜伽裤
       bike_shorts: 自行车短裤
@@ -1606,9 +1518,7 @@
     color: rgba(230, 84, 128, .4)
     tags:
       asymmetrical_legwear: 不对称的裤子
-      leotard_aside: 把连衣裤裆部剥到一边
       open_fly: 解开的裤子拉链
-      pants_down: 褪下裤子
       pants_rolled_up: 裤子卷起来
       pants_tucked_in: 裤子塞进去
       torn_jeans: 破损的牛仔裤
@@ -1670,7 +1580,6 @@
       striped_socks: 横条短袜
       fishnet_stockings: 渔网袜
       wet_pantyhose: 湿透的连裤袜
-      crotchless_pantyhose: 开裆连裤袜
 
   - name: 与袜子互动
     color: rgba(230, 84, 128, .4)
@@ -1700,18 +1609,14 @@
       argyle_legwear: 含菱形花纹的裤袜
       bow_legwear: 带蝴蝶结的裤袜
       arm_garter: 手臂袜带
-      areola_slip: 乳晕滑出
       backless: 露背
       backless_outfit: 露背装
-      ball_gag: 口球
       bandages: 绷带
       barcode_tattoo: 条形码纹身
       bare_arms: 露臂
-      bare_ass: 露臀
       bare_back: 露背
       battle_damage: 战损
       battle_scars: 战伤
-      bell_collar: 铃铛项圈
       black_bodysuit: 黑色连体衣
       black_bra: 脸红
       black_garter_belt: 黑色吊袜带
@@ -1722,55 +1627,28 @@
       blood_on_clothes: 衣上血
       bloodstain: 血迹
       blue_leotard: 蓝色紧身衣
-      bondage_outfit: 束缚装
-      bottomless: 裸体围裙，下面真空，无胸罩
       boyfriend_shirt: 男友衬衫
       bra: 胸罩
       bra_exposed: 胸罩露出
-      braless: 无胸罩
-      breast_bondage: 乳房束缚
-      breast_curtains: 乳帘
-      breasts_curtain: 乳帘
       breasts_on_tray: 托盘上的胸部
-      breasts_out: 乳房露出
       bridal_garter: 新娘吊袜带
       bunny_tail: 兔尾
-      butt_crack_cutout: 股沟镂空
-      butt_plug: 肛塞
       candle_wax: 蜡烛油
       center_opening: 中开
-      chastity_belt: 贞操带
-      chastity_cage: 贞操锁
       chemise: 衬裙
       chest_belt: 胸带
       chest_cutout: 胸部镂空
-      chinese_wedding: 红盖头，裸体，中式婚礼
       clear_transparent_raincoat: 透明雨衣
-      cloth_gag: 布口塞
-      clothespins: 晾衣夹
-      completely_nude: 全裸
-      condom: 避孕套
-      condom_belt: 避孕套腰带
       cotton: 棉
       covered_navel: 遮住的肚脐
-      covered_nipples: 遮住的乳头
       cracked_breastplate: 裂胸甲
-      crop: 短鞭
       crop_jacket: 短夹克
       cropped_blouse: 短上衣
-      crotch_cut: 开裆
-      crotch_cutout: 胯部镂空
-      crotch_zipper: 胯部拉链
-      crotchless: 开裆
-      crotchless_panties: 开裆内裤
       damaged_armor: 破损铠甲
       damaged_clothes: 破损衣服
-      detached_collar: 可分离项圈
       duct_tape: 胶带
       erotic_nurse_uniform_underneath: 里面穿情趣护士服
-      exposed_chest: 露胸
       exposed_pocket: 外露口袋
-      exposed_pussy: 露出阴部
       extremely_short_nurse_skirt: 极短护士裙
       extremely_short_skirt: 极短裙
       eye_mask: 眼罩
@@ -1803,7 +1681,6 @@
       holding_revolver: 手持左轮
       holding_rifle: 持步枪
       holographic_clothing: 全息服装
-      honggaitou: 红盖头，裸体，中式婚礼
       hood_up: 兜帽戴上
       hooded_bodysuit: 连帽连体衣
       hooded_cape: 连帽披风
@@ -1826,11 +1703,9 @@
       latex_skirt: 乳胶裙
       leather_clothing: 皮革服装
       lingerie: 情趣内衣
-      linked_piercing: 链式穿刺
       lipstick_mark: 口红印
       load_bearing_vest: 战术背心
       maid_outfit: 女仆装
-      masturbator: 自慰器
       medical_gown: 医疗袍
       mesh: 网眼
       messy_clothes: 凌乱的衣服
@@ -1840,60 +1715,26 @@
       micro_skirt: 超短裙
       midriff_cutout: 腰部镂空
       miko_outfit: 巫女装
-      naked: 红盖头，裸体，中式婚礼
-      naked_apron: 裸体围裙
-      naked_cape: 裸体披风
-      naked_cloak: 裸体斗篷
-      naked_coat: 裸体外衣
-      naked_hanfu: 裸体汉服，开袍，无内裤
-      naked_jacket: 裸体夹克
-      naked_kimono: 裸体和服
-      naked_poncho: 裸体斗篷
-      naked_ribbon: 裸体缎带
-      naked_tabard: 裸体罩袍
-      naked_vest: 裸穿马甲
-      naked_wedding_dress: 裸体婚纱
       negligee: 睡袍
       neon_trim: 霓虹饰边
-      nipple_clamps: 乳头夹
-      nipple_rings: 乳头环
-      nipples_visible: 乳头可见，骆驼趾
-      nipples_visible_through_clothes: 乳头透衣可见
-      no_bra: 裸体围裙，下面真空，无胸罩
-      no_panties: 开和服，裸体，无内裤
-      no_pants: 没穿裤子
-      nude: 开和服，裸体，无内裤
       nurse_outfit: 护士服
       off_shoulder: 露肩
-      ofuda_on_pussy: 阴部贴符咒
       oil_body: 油体
-      onahole: 飞机杯
-      one_breast_out: 单乳露出
       one_leg_out: 一腿伸出
       one_shoe_missing: 缺一鞋
       one_sleeve: 单袖
       one_sneaker_missing: 缺一运动鞋
       one_stocking_rolled_down: 单袜卷下
       open_front: 前开
-      open_kimono: 开和服，裸体，无内裤
-      open_robe: 裸体汉服，开袍，无内裤
       open_shirt: 开襟衬衫
-      open_shorts: 开裆短裤
-      paddle: 拍板
       panties: 内裤
-      panties_peek: 内裤露出
-      partially_undressed: 半脱
       playboy_bunny: 花花公子兔女郎
       police_cap: 警帽
-      pussy_cut: 小穴开口
       pvc: PVC
       qipao: 旗袍
       red_bat_wings: 红色蝙蝠翼
       red_bodystocking: 红色连体袜
-      red_rope: 红绳
       red_veil: 裸体缎带，红盖头，裸体
-      remote_control_vibrator: 遥控振动棒
-      revealing_clothes: 暴露衣装
       reverse_bunny_suit: 反穿兔女郎装
       reverse_bunnysuit: 反穿兔女郎装
       ripped: 撕破
@@ -1915,7 +1756,6 @@
       shouji: 障子(日式纸门)
       shoulder_slip: 滑肩
       shrug: 耸肩外套
-      sideboob: 侧乳
       silk: 丝绸
       silk_robe: 丝袍
       single_bare_shoulder: 单露肩
@@ -1923,21 +1763,14 @@
       single_thigh_boot: 单过膝靴
       single_thighhigh: 单过膝袜
       skintight: 紧身
-      spiked_collar: 尖刺项圈
       stage_costume: 舞台服
       stained_glass: 彩色玻璃
       stomach_cutout: 腹部镂空
       strapless: 无肩带
-      suction_cup_dildo: 吸盘假阳具
-      tail_plug: 尾巴肛塞
       tally_marks: 计数标记
-      tape_bondage: 胶带束缚
-      tape_on_pussy: 阴部贴胶带
-      tape_over_mouth: 嘴上贴胶带
       thigh_gap: 大腿间隙
       thong: 丁字裤
       thong_panties: 丁字裤
-      topless: 露胸
       torn: 撕裂
       torn_blouse: 破上衣
       torn_cape: 破披风
@@ -1968,15 +1801,10 @@
       transparent_vinyl_clothing: 透明乙烯基衣
       transparent_wedding_dress: 透明婚纱
       unbuttoned: 解扣
-      underboob: 下乳
-      underboob_cutout: 下乳镂空
       unzipped: 拉链拉开
-      used_condom: 用过的避孕套
-      used_condom_belt: 用过的避孕套腰带
       veil: 面纱
       waist_chain: 腰链
       waist_cutout: 腰镂空
-      wand_vibrator: 魔杖振动棒
       wet: 湿
       wet_appearance: 湿亮外观
       wet_body: 湿身
@@ -1986,7 +1814,6 @@
       whipped_cream: 奶油
       whistle: 哨子
       white_apron: 白围裙
-      white_breast_curtain: 白色乳帘
       white_coat: 白大褂
       white_collar: 白领
       white_gloves: 白手套
@@ -2022,7 +1849,6 @@
       fine_fabric_emphasis: 材质增强
       latex_thighhighs: 乳胶材质的长筒袜
       see-through_thighhighs: 透明的长筒袜
-      ass_cutout: 露出屁股的服饰
       asymmetrical_clothes: 不对称的服饰
       back_bow: (服饰)打在背后的结
       costume_switch: 服饰互换
@@ -2175,7 +2001,6 @@
       animal_feet: 动物脚
       animal_slippers: 动物拖鞋
       anklet: 脚环
-      shackles: 镣铐
       brown_footwear: 棕色鞋类
       cross-laced_footwear: 交叉系带鞋
       loafers: 乐福鞋
@@ -2252,7 +2077,6 @@
       neck_tattoo: 颈部纹身
       ascot: 领巾状宽领带
       ribbon_choker: 颈丝带
-      maebari/pasties: 阴贴/乳贴
       latex: 乳贴
       torn_clothes: 破烂衣服
       iron_cross: 铁十字勋章
@@ -2297,7 +2121,6 @@
       turtleneck_sweater: 高领毛衣
       undone_necktie: 解开领带
       whistle_around_neck: 脖子上挂着口哨
-      bell_collar: 铃铛项圈
       collar_on: 公开展示
 
   - name: 围巾
@@ -2312,7 +2135,6 @@
       beige_scarf: 米色围巾
       scarf_bow: 围巾蝴蝶结
       fur_scarf: 皮草围巾
-      naked_scarf: 裸围巾
       multicolored_scarf: 五彩围巾
       floating_scarf: 漂浮围巾
       long_scarf: 长围巾
@@ -2434,7 +2256,6 @@
     color: rgba(230, 84, 128, .4)
     tags:
       bandage: 绷带
-      leash: 皮带
       arm_tattoo: 手臂纹身
       number_tattoo: 数字文身
       bead_bracelet: 珠子手链
@@ -2445,12 +2266,8 @@
       wristband: 腕带
       bracer: 护腕
       cuffs: 袖口
-      bound_wrists: 绑定手腕
       wrist_scrunchie: 手腕发圈
-      handcuffs: 手铐
-      shackles: 手铐
       chains: 锁链
-      chain_leash: 锁链带牵绳
 
   - name: 手套
     color: rgba(230, 84, 128, .4)
@@ -2540,7 +2357,6 @@
       bowl_cut: 锅盖头
       circlet: 头冠
       double_bun: 团子头
-      double_dildo: 双头假阴茎
       drill: 钻头
       faucet: 水龙头
       hachimaki: 扎头巾(名词)
@@ -2868,7 +2684,6 @@
       shaded_face: 脸上有阴影，配合蔑视
       jitome: 鄙夷的眼神
       frown: 皱眉/蹙额
-      wince: 皱眉蹙额(性交前)
       furrowed_brow: 眉头紧锁
       fear_kubrick: 害怕侧目
       laughing: 在笑的
@@ -2904,7 +2719,6 @@
       flustered: 慌张的
       sweat: 流汗
       scared: 害怕的
-      ahegao: 阿黑颜
       endured_face: 忍耐的表情
       restrained: 忍耐
       dark_persona: 黑化的
@@ -2917,22 +2731,16 @@
       twitching: 抽搐
       spasm: 痉挛
       trembling: 颤抖
-      rape_face: 强奸脸
-      rolling_eyes: 翻白眼(高潮眼）
       envy: 嫉妒
-      female_orgasm: 绝顶
       heavy_breathing: 重呼吸，可能没用
       naughty: 淘气
       expressions: 表情差分（大概）
-      moaning: 呻吟
       ashamed: 羞愧
       barcode_tattoo: 条形码纹身
       bite_marks: 咬痕
       blood_on_face: 脸上血迹
       body_blush: 全身泛红
-      bound_wrists_marks: 缚腕痕
       bruise: 淤青
-      bukkake: 颜射群
       calm: 平静
       clenched_fists: 握拳
       clinging: 依偎
@@ -2942,27 +2750,14 @@
       confident: 满足
       convulsing: 抽搐，瘫软身体
       cool: 酷
-      creampie: 中出
-      cum_bath: 精液浴
-      cum_drip: 精液滴落
-      cum_on_body: 身上精液，脸上精液
-      cum_on_breasts: 胸上射精
-      cum_on_clothes: 精液在衣服上
-      cum_on_face: 脸上射精
-      cum_overflow: 精液溢出
-      cum_pool: 精液池
-      cum_string: 精液丝
       curious: 好奇
       cuts: 伤口
       defeated: 被打败，被俘，伤疤
       devoted: 虔诚
-      dominant: 支配
       embarrassed: 尴尬
       emotionless: 无表情
-      excessive_cum: 大量精液
       flush: 脸红
       foaming_at_the_mouth: 口吐白沫
-      fucked_silly: 操傻，精神崩溃
       goosebumps: 鸡皮疙瘩
       grabbing_sheets: 抓床单
       greasy_skin: 汗水
@@ -2976,38 +2771,24 @@
       limp_body: 抽搐，瘫软身体
       lipstick_mark: 口红印
       lipstick_mark_on_body: 身上口红印
-      mind_break: 精神崩溃
       nervous: 紧张
       nervous_sweatdrop: 紧张冷汗
       no_reaction: 无反应
       no_resistance: 不抵抗
       o_o: O_O(惊讶)
-      obedient: 跪，顺从
-      orgasm: 高潮
       pain: 疼痛
       panting: 喘息
       peaceful: 平静
-      precum: 前列腺液
-      pussy_juice_pool: 淫水池
-      pussy_juice_stain: 脸红
-      red_ass: 红臀
-      red_marks: 鞭痕，红痕
       relaxed_face: 放松的脸
       reluctant: 不情愿
-      rope_marks: 绳痕
-      sadistic: 施虐
       saliva_trail: 唾液丝
       scars: 被打败，被俘，伤疤
       scratch_marks: 抓痕
       shaking: 颤抖
       skindentation: 皮肤凹陷
-      slap_mark: 掌印
       slight_trembling: 微颤
-      spank_mark: 挨打印记
-      squirting: 潮喷
       steaming_body: 冒蒸汽身体
       struggling: 挣扎
-      submissive: 顺从
       surprised: 惊讶
       sweat_drops: 汗珠
       sweat_stain: 汗渍
@@ -3015,9 +2796,7 @@
       sweaty: 出汗
       tally_marks: 计数标记
       toes_curling: 脚趾蜷曲
-      torogao: 失神脸(とろ顔)
       wet: 湿润
-      whip_marks: 鞭痕，红痕
       zzz: ZZZ(睡觉)
       anxious: 焦虑
       awkward: 尴尬
@@ -3033,7 +2812,6 @@
       asleep: 睡着
       corrupted: 堕落
       corruption: 腐蚀
-      lustful: 淫欲
       motherly: 母性
       natural: 自然
       legs_trembling: 腿颤抖
@@ -3052,9 +2830,7 @@
       on stomach: 趴
       on_side: 侧卧
       on_stomach: 趴着
-      top-down_bottom-up: 趴着翘臀
       the_pose: 趴在地上并翘起脚
-      bent_over: 翘臀姿势
       upside-down: 倒立
       reversal: 反转
       fighting_stance: 战斗姿态
@@ -3071,10 +2847,8 @@
       lying_on_the_lake: 躺在湖面上
       lying_on_water: 躺在水中
       on_back: 仰躺
-      prone_bone: 俯卧后入
       reclining: 斜倒斜躺姿势
       sleeping_upright: (不躺着)睡觉|直立睡觉
-      presenting: 展示（后接部位）
       spinning: 旋转
       posing: 摆姿势
       stylish_pose: 时尚姿势
@@ -3083,32 +2857,20 @@
       standing_on_liquid: 站在水上或液体上
       standing_split: 站立劈叉|站立高抬腿
       thinking: 思考
-      all_fours_on_bed: 床上四肢着地
       app_on_phone: 手机应用
       bending_over: 弯腰
       biting_lower_lip: 咬下唇
       black_bra: 脸红
       bouncing: 上下跳动
-      chastity_belt: 贞操锁，贞操带
-      chastity_cage: 贞操锁
       cinema: 电影院
       city_view: 靠窗，城景
       coin_on_string: 绳上硬币
       fake_screenshot: 伪截图
       fast_asleep: 熟睡
-      female_pubic_hair: 脸红
-      forced_open_mouth: 被迫张嘴
       free_balance: 站立，自由平衡
       frosted_glass: 磨砂玻璃
       full_face_blush: 满脸通红
-      gagging: 干呕
       head_back: 弓背，仰头
-      hidden_camera: 隐藏摄像头
-      hypnosis: 催眠，催眠钟
-      hypnosis_app: 催眠APP，智能手机
-      hypnosis_clock: 催眠，催眠钟
-      hypnotic_pocket_watch: 催眠怀表
-      large_areolae: 脸红
       latex_bodysuit: 乳胶连体衣
       livestream: 直播
       lying_beside: 躺旁边
@@ -3117,17 +2879,10 @@
       lying_on_side: 侧躺
       lying_on_stomach: 俯卧
       lying_on_the_girl: 压在女孩身上
-      male_pubic_hair: 男性阴毛
-      male_submission: 男性顺从，颤抖
       male_trembling: 男性颤抖
       medical_examination: 体检
       medical_excuse: 医疗借口
       midair: 悬空
-      naked_apron: 裸体围裙
-      nipples_slip: 乳头滑出
-      nipples_visible: 乳头可见，骆驼趾
-      no_bra: 裸体围裙，下面真空，无胸罩
-      no_panties: 无内裤
       no_toys: 无玩具
       off_shoulder: 露肩
       ojousama_pose: 大小姐姿势
@@ -3135,29 +2890,20 @@
       on_bed: 床上
       on_chair: 椅子上
       on_couch: 沙发上
-      on_recording: 隐藏摄像头，被录
       on_table: 桌子上
       overhead: 俯视
       panties: 内裤
-      penis_awe: 对阴茎敬畏，紧张
       pov: 第一人称视角
       private: 私密
-      pussy: 小穴
-      pussy_juice_stain: 脸红
       recording: 录像
       religious_authority: 宗教权威
       remote_control: 遥控
       reverse: 反向，回眸
-      reverse_suspended_congress: 反向悬挂式
-      reverse_upright_straddle: 坐腿上，反向跨坐
-      risk_of_discovery: 被发现风险
       schoolgirl: 女学生
       selfie: 自拍
-      sex_from_behind_playing_on_screen: 背后做爱边玩手机
       sheer: 薄纱
       shower: 淋浴
       side_view: 侧视
-      sitting_on_face: 坐在脸上
       sitting_on_floor: 坐在地板上
       sitting_on_playground: 坐在操场上
       sitting_sideways_on_lap: 喂奶，侧坐腿上
@@ -3165,13 +2911,9 @@
       speed_line: 速度线
       spiral_background: 旋涡眼，旋涡背景
       split_screen: 分屏
-      standing_missionary: 面对面，站立传教士
-      streaming: 直播
-      suspended_congress: 动作线
       technology: 科技
       tiled_wall: 瓷砖墙
       tongue_tattoo: 舌纹身
-      train: 列车，拥挤，痴汉
       unconscious: 无意识，恍惚状态
       webcam: 网络摄像头
       zzz: ZZZ(睡觉)
@@ -3233,8 +2975,6 @@
       arm_ribbon: 手臂丝带
       bandaged_arm: 缠着绷带的手臂
       bandaid_on_arm: 手臂上贴着创可贴
-      bound_arms: 手臂被束缚
-      convenient_arm: 遮住关键部位的手臂
       extra_arms: 多只手臂
       locked_arms: 互挽手臂
       outstretched_arm: 伸出手臂
@@ -3274,7 +3014,6 @@
       shading_eyes: 遮阳手势
       finger_biting: 咬手指
       finger_in_mouth: 吮吸手指
-      fingering_through_clothes: 手指
       fingers_together: 手指并拢
       hair_twirling: 手指卷着头发
       hands_clasped: 双手手指交叉|双手紧握
@@ -3305,16 +3044,12 @@
       hair_pull: 拉头发
       covering_mouth: 遮盖嘴
       covering_xx: 遮盖xx
-      self_fondle: 自我抚摸
       adjusting_thighhigh: 调整过膝袜
       chin_rest: 托脸颊
       head_rest: 托头
       take: 拿着
       _sheet_grab: 抓床单
-      groping: 摸索
       skirt_lift: 掀裙子
-      crotch_grab: 手抓裆部
-      covering_chest_by_hand: 用手遮住胸部
       bangs_pinned_back: 掀起的刘海
       clothes_lift: 掀起衣物
       dress_lift: 掀起裙子
@@ -3324,7 +3059,6 @@
       shirt_lift: 拉起掀起卷起衬衫
       skirt_basket: 指掀起裙子时形成的篮子形状
       skirt_flip: 被掀起裙子(含突发情况意义)
-      bikini_lift: 往上剥开的比基尼
       leg_lift: 单腿抬高
       lifting_person: 将人抱起
       strap_lift: 往上掰衣物的吊带
@@ -3332,19 +3066,14 @@
       bikini_pull: 扯着比基尼
       cheek_pull: 扯脸颊
       clothes_pull: 拉开衣物
-      dress_pull: 剥下裙子胸口的部分
       hair_pulled_back: 头发往后扎
-      kimono_pull: 剥开和服
-      leotard_pull: 剥开连衣裤
       mask_pull: 拉着口罩
       pants_pull: 拉着裤子
       pulled_by_another: 被另一个人拉(或拉衣物)
-      pulled_by_self: 拉下自己的衣物
       pulling: 拉
       shirt_pull: 拉开衬衫
       shorts_pull: 褪下短裤
       skirt_pull: 拉开裙子
-      swimsuit_pull: 扯下泳衣
       zipper_pull_tab: 拉链的拉片
       adjusting_clothes: 拨弄衣服
       adjusting_eyewear: 扶眼镜
@@ -3353,23 +3082,17 @@
       adjusting_hat: 整理帽子
       adjusting_swimsuit: 拨弄泳衣
       steepled_fingers: 指尖抵着指间
-      cum_on_hand: 手上精液，精液丝
       disembodied_hand: 独立的手
-      double_handjob: 双手手交
       finger_on_lips: 手指在唇上
       hand_covering_own_mouth: 手捂嘴
       hand_mirror: 手镜
-      hand_on_breast: 手在胸上
-      hand_on_own_crotch: 手在自己胯部
       hand_on_wall: 手扶墙
       hands_at_sides: 站立，手在两侧
       hands_on_chest: 手放在胸口
       hands_on_table: 手放在桌上
       hands_on_wall: 弯腰，手扶墙
       hands_pov: 手的视角(第一人称)
-      holding_penis_in_both_hands: 双手握住阴茎
       pov_hands: 第一人称双手
-      pov_hands_on_head: 第一人称手按头
       sucking_finger: 吸手指
       veiny_hands: 动作线
 
@@ -3399,7 +3122,6 @@
       holding_chopsticks: 拿着筷子
       holding_cigarette: 手叼香烟
       holding_clothes: 拿着衣服
-      holding_condom: 拿着避孕套
       holding_cup: 手持杯子
       holding_dagger: 手持匕首
       holding_doll: 抱着玩偶
@@ -3455,20 +3177,15 @@
       holding_tray: 托着盘子
       holding_umbrella: 撑伞
       holding_wand: 握着棒子
-      holding_whip: 握着鞭子
       arm_around_neck: 单手搂着脖子
       arms_around_neck: 双手搂着脖子
       ankle_grab: 抓腿，抓脚踝
       ankle_grabbing_by_male: 男抓脚踝
       choke_hold: 扼喉，勒颈
-      from_behind_grab: 抓他人乳房，从后抓
-      grabbing_own_breast: 抓自己胸
-      head_grab: 抓头按
       holding_controller: 手持手柄
       holding_cooking_pot: 手持锅
       holding_small_mirror: 手持小镜子
       holding_underwear: 脸红
-      holding_vibrator: 拿振动棒
       keyholder: 钥匙扣
       pov_holding_phone: 精液
 
@@ -3477,14 +3194,10 @@
     tags:
       covering: 遮盖的动作
       covering_face: 挡住脸
-      covering_ass: 遮着臀部
-      covering_crotch: 遮着裆部
       covering_eyes: 遮住眼睛
       covering_mouth: 挡住嘴巴
-      covering_nipples: 挡住乳头
       hands_on_another's_: 双手放在别人的脸上
       hands_on_another's_cheeks: 双手放在对方的脸颊上
-      hands_on_ass: 双手放在屁股上
       hands_on_feet: 双手放在脚上
       hands_on_headwear: 双手碰到头上的饰物
       hands_on_hilt: 双手搭在刀柄上
@@ -3500,12 +3213,10 @@
       hands_on_hips: 双手叉腰|双手搁在腰上
       hand_on_another's_: 手接触到对方的脸
       hand_on_another's_cheek: 手摸着对方的脸颊
-      hand_on_another's_chest: 手放在对方的胸前
       hand_on_another's_chin: 手托着对方的下巴
       hand_on_another's_head: 手放在对方的头上
       hand_on_another's_shoulder: 手放在对方的肩上
       hand_on_another's_stomach: 手放在对方的肚子上
-      hand_on_ass: 手放在屁股上
       hand_on_head: 手放在头上
       hand_on_headwear: 手触碰帽子
       hand_on_hilt: 手搁在刀柄上
@@ -3523,19 +3234,12 @@
   - name: 手部动作(抓着某物)
     color: rgba(241, 229, 140, .4)
     tags:
-      ass_grab: 抓着屁股
-      flat_chest_grab: 抓着贫乳
       grabbing: 抓住|抓着
-      grabbing_another's_ass: 抓着对方屁股
       grabbing_another's_hair: 抓着对方的头发
-      grabbing_from_behind: 从背后揉胸|从背后抓住胸部
-      grabbing_own_ass: 抓着自己的屁股
-      guided_penetration: 抓住男性器插入自己
       hair_grab: 抓着头发
       leg_grab: 抓着腿
       necktie_grab: 抓着领带
       neckwear_grab: 抓着颈部的衣服
-      penis_grab: 抓着阴茎
       pillow_grab: 抓着枕头
       sheet_grab: 抓着床单
       tail_grab: 抓着尾巴
@@ -3547,19 +3251,12 @@
     color: rgba(241, 229, 140, .4)
     tags:
       legs_up: 抬一只腿
-      spread legs: 张腿
       legs_together: 两腿并拢
       crossed_legs: 二郎腿
-      m_legs: M字摆腿
-      standing_split,_leg_up: M字摆腿
       curtsy: 屈膝礼（女仆行礼）
-      hand_between_legs: 双腿之间的手
       open_stance: 稍息
-      convenient_leg: 挡住关键部位的腿
       leg_lock: 用双腿夹住
       legs: 双腿
-      legs_over_head: 双腿抬过头
-      squatting,_open_legs: 蹲下分开双腿
       knees_together_feet_apart: 膝盖合并，两脚分开
       animal_on_lap: 膝盖上有动物
       hand_on_own_knee: 手放在自己的膝盖上
@@ -3569,7 +3266,6 @@
       on_lap: 在膝盖上
       sitting: 坐
       wariza: 鸭子坐
-      straddling: 跨坐
       yokozuwari: 侧身坐
       sitting_backwards: 向后坐
       sitting_in_tree: 坐在树上
@@ -3589,7 +3285,6 @@
       sitting_on_desk: 坐在课桌上
       sitting_on_lap: 坐在大腿上
       sitting_on_person: 坐在人身上
-      upright_straddle: 对坐体位
       squatting: 蹲下
       one_knee: 一只膝盖
       kneeling: 跪
@@ -3607,8 +3302,6 @@
       leg_belt: 腿部系着带子
       leg_hair: 腿毛
       leg_up: 抬起腿
-      legs_apart: 两腿分开
-      lowleg: M字摆腿
       mechanical_legs: 机械义足
       multiple_legs: 多足角色
       no_legs: 没画出腿
@@ -3622,7 +3315,6 @@
       feet_out_of_frame: 双脚不在图内
       feet_up: 翘起脚
       wrong_feet: 脚部作画错误
-      cameltoe: 骆驼趾
       pigeon-toed: 萌向的内八腿
       tiptoes: 踮起脚尖
       toe-point: 趾尖|脚尖
@@ -3631,30 +3323,21 @@
       ankle_wrap: 脚踝套
       crossed_ankles: 交叉脚踝
       pince-nez: 夹鼻眼镜|无脚眼镜
-      folded: 抬腿露阴
       thick_thighs: 肉腿
       thigh_holster: 腿上系着带子或工具包或枪套
       flying_kick: 飞踢
       standing_on_one_leg: 单腿站立
-      folded_legs: 折腿，M字腿
       foot_dangle: 脚底，脚悬垂
       foot_kiss: 吻脚
-      foot_on_crotch: 脚踩裆部
       foot_on_face: 脚踩脸
-      foot_on_penis: 脚踩阴茎
-      foot_worship: 足崇拜
-      girl_kneeling: 女跪男站
       hands_on_knees: 弯腰，手扶膝
       hanging_legs: 悬垂的腿
-      kneeling_in_front: 跪在前面
-      leg_on_shoulder: 单腿抬起，腿在肩上
       legs_crossed: 交叉腿
       legs_dangling: 腿晃荡
       legs_lift: 抬腿
       legs_lock: 腿锁
       legs_on_table: 腿放在桌上
       legs_shaking: 颤抖，腿抖
-      legs_spread: 腿张开
       one_leg_lifted: 单腿抬起
       sitting_between_his_legs: 坐他腿间，后抱
       toe_scrunch: 踮脚，脚趾蜷缩
@@ -3664,17 +3347,12 @@
     tags:
       asymmetrical_docking: 胸部互碰|胸顶着胸
       back-to-back: 背对背
-      cunnilingus: 舔阴
       eye_contact: 眼对眼（对视）
       facing_another: 面对另一个
       facing_away: 二人面对面(脸贴得很近)
       feeding: 喂食
-      finger_in_another's_mouth: 口内指交
-      fingering: 指交
       french_kiss: 法国之吻
       giving: 递|赠送
-      grinding: 素股|臀推
-      groping: 猥亵
       holding_hands: 牵手
       hug: 拥抱
       imminent_kiss: 即将接吻
@@ -3683,17 +3361,13 @@
       interlocked_fingers: 紧扣的双手
       Kabedon: 壁咚
       lap_pillow: 膝枕
-      licking_penis: 舔阴茎
       long_tongue: 长舌头
       mimikaki: 掏耳勺
-      oral_invitation: 迎接射精而伸出舌头
       princess_carry: 公主抱
       shared_bathing: 共浴|鸳鸯浴
       shared_food: 共享食物|用嘴递食物
-      sitting_on_head: 坐在头上
       sitting_on_shoulder: 坐在肩膀上
       slapping: 掌掴
-      spanking: 打屁股
       special_feeling_(meme): 雪中打伞的恋人梗
       symmetrical_docking: 胸挤胸
       tongue: 舌头
@@ -3701,14 +3375,10 @@
       uvula: 小舌头|口盖垂|悬雍垂
       ear_biting: 咬耳朵
       mixed_bathing: 混浴
-      accidental_exposure: 意外暴露
       accidental_touch: 意外触碰
       after_exercise: 运动后
-      after_fellatio: 口交后
-      after_gangbang: 轮奸后
       after_hours: 办公室，下班后
       after_school: 教室，放学后
-      after_sex: 事后
       against_glass: 挤压玻璃(无效)
       against_wall: 靠墙
       against_window: 靠窗
@@ -3718,10 +3388,8 @@
       armlock: 锁臂
       arms_around_waist: 手臂环腰
       arms_held_back: 手臂后拉
-      aroused_despite_humiliation: 虽辱仍兴奋
       artistic: 艺术感
       ashamed: 羞愧
-      asphyxiation: 动作线
       ass_ripple: 臀部波动
       ass_to_ass: 臀对臀
       assertive_female: 强势女性
@@ -3729,79 +3397,45 @@
       back_hug: 坐他腿间，后抱
       bathing: 洗澡
       before_and_after: 瞬间沦陷，两格，前后对比
-      before_sex: 性爱前，避孕套盒
       bimbofication: 笨蛋化
       biting: 咬
       bleeding: 出血
       blood_from_mouth: 嘴角流血
       blood_on_face: 脸上血迹
       blowing: 吹
-      blowjob: 口交
       boss: 老板
-      bound: 被绑，被束缚
       bowing: 鞠躬
-      boy_on_top: 传教士，男在上
-      boy_standing: 女跪男站
       breast_press: 面对面，抱，压胸
       breastfeeding: 喂奶，侧坐腿上
       breasts_on_glass: 压在玻璃上的胸部
-      breasts_squeeze_together: 挤乳
       breathing_fire: 喷火
       broom_riding: 骑扫帚
       bruise: 掌印，淤青
       brushing_teeth: 刷牙
       bubble_blowing: 吹泡泡
-      bukkake: 颜射群
       bullying: 欺负
       burning: 燃烧
       captured: 被打败，被俘，伤疤
       cast: 投掷
       chasing: 追逐
-      chikan: 列车，拥挤，痴汉
       choking: 扼喉
       circle: 被包围，圈
       cleaning: 打扫
       cleanup: 清理
       climbing: 攀爬
-      clothed_female_nude_male: 穿衣女性裸体男性
-      coercion: 胁迫
       collarbone: 锁骨
       comforting: 安慰
       condensation: 凝结
-      condom_in_mouth: 嘴里含避孕套
-      condom_left_inside: 避孕套留在里面
       confident: 满足
       convulsing: 抽搐，瘫软身体
       cooking: 烹饪
-      cooperative_fellatio: 协作口交
       corruption: 堕落，黑暗人格
-      covered_nipples: 遮住的乳头
       covering_own_mouth: 自己捂嘴
-      creampie: 中出
-      crowded: 列车，拥挤，痴汉
       cuddling: 拥抱
-      cum_bath: 精液浴
-      cum_bubble: 精液泡泡
-      cum_covered: 沾满精液
-      cum_dump: 精液倾倒
-      cum_in_mouth: 嘴里射精
-      cum_in_pussy: 阴道内射精
-      cum_on_body: 身上精液，脸上精液
-      cum_on_breasts: 胸上射精
-      cum_on_face: 脸上射精
-      cum_on_feet: 脚上射精
-      cum_on_soles: 脚底射精
-      cum_overflow: 精液溢出
-      cum_pool: 精液池
-      cum_silk: 精液丝
-      cum_string: 精液丝
-      cum_through_panties: 内裤套阴茎，穿过内裤射精
       dancing: 跳舞
-      deep_penetration: 深插
       defeated: 被打败，被俘，伤疤
       devoted: 虔诚
       diving: 潜水
-      dominant: 支配
       dragging: 拖某物
       drawing: 绘画
       drawing_bow: 拉弓
@@ -3810,184 +3444,97 @@
       driving: 驾驶
       dropping: (意外)掉落
       drowning: 脸浸水，溺水
-      drugged: 下药
       drying: 弄干(浴后)
       dual_wielding: 双持
       dull_eyes: 无表情，呆滞眼
-      eager_sucking: 急切吮吸
       eating: 吃东西
       embarrassed: 尴尬
       embrace: 相拥
-      emotionless_sex: 冷漠做爱
-      erection: 勃起
-      excessive_cum: 大量精液
       exercise: 做运动
-      expressionless_sex: 无表情性爱
-      face_fucking: 颜面插
       face_in_water: 脸浸水，溺水
-      face_sitting: 坐脸
       feet_focus: 足部聚焦
       feet_on_ground: 脚着地
-      female_domination: 女性支配
       female_pov: 女方视角
       fighting: 战斗中的
       firing: 射击
       fishing: 钓鱼
       flapping: 拍打动作
-      flashing: 露出
       fleeing: 在逃跑的
       flexing: 秀肌肉
       flying: 飞行
       foaming_at_the_mouth: 口吐白沫
-      forced_to_watch: 被迫观看，观众
-      frenulum_licking: 舔系带
       frozen: 冻住
-      fucked_silly: 操傻，精神崩溃
       full_body: 男覆盖女，全身
-      gentle_sex: 温柔性爱，暗示
       girl_lifting: 举女孩
-      girl_pinned: 被压住的女孩
-      glans_licking: 舔龟头
-      glansjob: 龟头手交
       greasy_skin: 汗水
       grooming: 梳理毛发
-      group_effort: 轮奸，群体行为
-      group_sex: 群交
       guilty_pleasure: 罪恶快感
       hair_brushing: 梳头
       hair_tucking: 撩头发
-      half_inserted: 半插入
       hanging: 吊起来的
-      held_down: 抓头按
       hidden: 隐藏
       hiding: 躲藏
       hitting: 击打
       hug_from_behind: 后抱，腿锁
       hugging: 拥抱
-      humping_pillow: 蹭枕头
       imagining: 在想象的
-      imminent_penetration: 即将插入，透视缩短
-      implied: 温柔性爱，暗示
-      implied_cunnilingus: 暗示的口交
-      implied_sex: 隐蔽性爱，暗示性爱
       in_container: 在容器中
-      in_heat: 发情
       innocent: 清纯→堕落
-      instant_loss: 瞬间沦陷，两格，前后对比
       intimate: 亲密
-      irrumatio: 颜面插(被动)
       jumping: 跳跃
-      just_the_tip: 只插头
       kissing: 事后余韵
-      kissing_penis: 亲吻阴茎
-      kissing_tip: 亲吻龟头
-      labia_pull: 拉开阴唇
       large_breasts: 巨乳
-      large_penis: 大阴茎
       licking: 舔
-      licking_feet: 舔脚
       licking_lips: 舔嘴唇
-      licking_testicle: 舔睾丸
       lifting: 举起
       lifting_girl: 举起女孩
       limp_body: 抽搐，瘫软身体
       lip_biting: 咬嘴唇
-      lotion_on_breasts: 乳房抹乳液
-      lotion_on_thighs: 大腿抹乳液
-      lustful: 淫欲
-      male_domination: 男性支配
-      male_ejaculation: 颤抖，男性射精
-      male_fully_covers_female: 男完全覆盖女
       male_pov: 男性视角
       man_covered_the_girl: 男覆盖女，全身
-      man_on_top: 男在上，男覆盖女
-      mating_press: 交配压制，男在上
       meditation: 冥想
-      mind_break: 精神崩溃
       model: 模特
       multiple_boys: 多男
-      multiple_males_serving: 女性支配，多男侍奉
       muscular_male: 体型差
-      mutual_oral: 互口
       nervous: 紧张
       nervous_sweatdrop: 紧张冷汗
-      no_escape: 无处可逃
-      normal: 正常→被催眠
-      obedient: 跪，顺从
-      ofuda_on_nipples: 乳头贴符咒
       oiled_feet: 涂油脚，乳液，亮脚底
       oiled_skin: 涂油皮肤
       one_watches: 一人观看
-      open_pussy_by_self: 自己掰开阴部
       oral_cavity: 口腔
-      orgasm: 高潮
       painting: 绘画
       parody: 模仿
       patient: 病人
-      penis_between_feet: 脚间阴茎，脚底挤压
-      penis_in_mouth: 阴茎在嘴里
-      penis_on_breasts: 阴茎在乳房上
-      penis_on_face: 阴茎在脸上
-      penis_over_eyes: 阴茎在眼上
-      perpendicular_paizuri: 垂直乳交
       photographer: 摄影师
-      piledriver: 倒立性交
-      pinned: 被按住
-      pinning_down: 按住
       playing_card: 扑克牌
       playing_games: 打游戏
       playing_instrument: 演奏乐器
       pole_dancing: 钢管舞
-      pov_crotch: 第一人称，裆部视角
       power_imbalance: 权力不对等
       praying: 祈祷
-      precum: 前液
       presenting_armpit: 展示腋下
-      public_indecency: 公然猥亵
-      pulling_anal_beads: 拉出肛门串珠
       punching: 挥拳
       pure_bodies: 纯身体
       pushing: 推搡
-      pussy_gaping: 阴道扩张
-      pussy_juice_pool: 淫水池
-      pussy_juice_trail: 淫水痕迹
-      pussy_to_pussy: 阴对阴
-      pussy_visible: 小穴可见
       reading: 阅读
       reading_book: 看书，无表情
-      reading_porn_magazine: 看黄书
-      red_marks: 鞭痕，红痕
       relaxed_face: 放松的脸
       reluctant: 不情愿
       resisting: 抵抗
-      reverse_cowgirl_position: 反向骑乘位
-      reverse_doggystyle: 反向后入式
-      reverse_paizuri: 逆向乳交
-      riding: 骑
       role_reversal: 角色反转
-      rolled_eyes: 面部特写，阿黑颜，翻白眼
-      rough_sex: 粗暴性爱
       running: 奔跑
       sagging_breasts: 下垂乳
-      sagging_penis: 事后，垂软阴茎
       saliva_trail: 唾液丝
       scars: 被打败，被俘，伤疤
-      scissoring: 剪刀式(磨镜)
       secret: 绿帽绝望
       sewing: 缝纫
-      sex_from_behind: 后入，靠墙
-      shaft_licking: 舔阴茎杆
       shiny_soles: 涂油脚，乳液，亮脚底
       shopping: 购物
       showering: 淋浴
-      side_doggy: 侧躺后入式
       sing: 唱歌
       singing: 唱歌
       size_difference: 体型差
-      skull_fucking: 深喉颜面插
-      slap_mark: 掌印，淤青
       slashing: 砍
-      sleep_molestation: 睡奸
       sleeping: 睡觉
       smelling: 闻
       smelling_clothes: 闻衣服
@@ -3996,15 +3543,10 @@
       soaking_feet: 泡脚
       soccer: 足球运动
       soles: 脚底，脚悬垂
-      soles_squeezing: 脚间阴茎，脚底挤压
       spilling: 从容器中倒出液体的动作
       spitting: 从嘴里吐出液体的动作
       splashing: 飞溅
-      spread_pussy: 掰开小穴
-      standing_sex: 精液
-      stealth_sex: 隐蔽性爱，暗示性爱
       steaming_body: 冒蒸汽身体
-      stepped_on_artificial_vagina: 踩飞机杯
       stepping_on: 踩踏
       stranger: 陌生人
       strangers: 陌生人
@@ -4014,25 +3556,18 @@
       struggling: 挣扎
       surprised: 惊讶
       surrounded: 拥挤，被包围
-      suspended: 悬吊
       swimming: 游泳
       swing: 摆动
       table_humping: 蹭桌子
       tail_wagging: 摇尾巴
-      taken_advantage_of: 被趁虚而入
       taking_picture: 拍照|自拍
       talking: 有台词的
       talking_on_phone: 打电话
       teasing: 戏弄
-      thighs_squeezing_penis: 女上位，大腿夹阴茎
-      throat_bulge: 喉咙鼓起
-      throat_fucking: 喉咙插
       tickling: 挠痒痒
       toilet_use: 上厕所
       tossing_: 投掷
       touching: 触碰
-      touching_self: 自摸
-      trampling: 踩踏
       tripping: 被绊倒
       trolling: 恶搞行为
       trombone: 长号式
@@ -4045,156 +3580,56 @@
       unsheathing: 拔出鞘的
       untying: 解开的
       unzipping: 拉开拉链(动作)
-      veiny_penis: 青筋阴茎
-      vomiting_cum: 吐出精液
       wading: 涉水
       waiting_turn: 排队等候
       waking_up: 醒来
       walking: 走路
       walking_on_liquid: 在液体上行走
       washing: 洗涤
-      watching_porn: 看黄片
       wet: 湿，肥皂泡沫
       wet_clothes: 湿衣
       wet_face: 湿脸
       wet_skin: 湿皮肤
-      whip_marks: 鞭痕，红痕
       whispering: 讲悄悄话
       whispering_in_ear: 耳边低语
-      woman_hypnotized_lewd: 旋涡眼，被催眠淫荡
       worship: 跪，崇拜
       wrestling: 摔角(运动)
       writing: 写作
       xboys: X个男孩
       yawning: 打哈欠
-      abduction: 绑架
       absorption: 吸收
       accidental_witness: 意外目击
       after_use: 使用后
-      afterglow: 事后余韵
       always_available: 随时可用
-      anal_sex: 肛交
       another_man: 另一个男人
-      another_round: 再来一轮
       being_watched: 被窥视
-      blackmail: 勒索
-      bottomless: 裸体围裙，下面真空，无胸罩
-      bound_by_tentacles: 被触手束缚
-      bound_torso: 缚躯
-      brand: 烙印
-      breast_bondage: 乳房束缚
-      breeding: 配种
-      broken_in: 被调教完毕
-      butt_plug: 肛塞
       cage: 笼子
-      casual_nudity: 随意裸体
       changing_clothes: 换衣服
-      chastity_cage: 贞操笼
       checking: 检查
       circle_formation: 围成一圈
       coming_home: 回家
-      condom_wrapper: 避孕套包装
-      couple_having_sex_inside: 里面的情侣在做爱
-      couple_inside_having_sex: 里面的情侣在做爱
-      cuckold: 绿帽
-      cum_drip: 精液滴落
-      cum_on_sheets: 床单上射精
-      cumdrip: 精液滴落
-      cumdump: 精液垃圾桶
       daily_routine: 无人知晓
       debt: 债务
-      degradation: 羞辱贬低
-      dildo_riding: 骑假阳具
       disheveled_clothes: 凌乱的衣服
       donation_alert: 打赏提示
-      economic_dependence: 经济依赖
-      erection_under_clothes: 衣服下的勃起
       excessive_speed: 超速
-      exhausted_but_willing: 疲惫但愿意
-      fellatio: 口交
       first_time: 第一次
-      forced_open_mouth: 被迫张嘴
-      forced_prostitution: 强迫卖淫
-      free_use: 免费使用(性奴)
-      from_reluctant_to_eager: 从不情愿到渴望
-      futa_on_female: 扶她对女性
-      futa_with_futa: 扶她互搞
-      futanari_masturbation: 扶她自慰
-      gang_rape: 轮奸
       given_up: 放弃
-      glory_hole: 寻欢洞
-      group_blackmail: 集体勒索
-      having_sex: 做爱
-      hidden_camera: 隐藏摄像头
-      hidden_camera_pov: 隐藏摄像头视角
-      human_toilet: 人体马桶
-      husband_waiting: 丈夫在等
-      implied_after_sex: 暗示事后
-      implied_fellatio: 暗示口交
       infestation: 感染
-      inserted: 插入
-      inside_slime: 在史莱姆体内
-      kinbaku: 紧缚(日式)
-      kitten_play: 小猫扮演
-      loan_shark: 高利贷
-      locked: 锁住
-      lower_body_exposed: 下半身暴露
-      masturbating: 自慰
-      mechanical_tentacles: 机械触手
-      milking_machine: 榨乳机
-      mounting: 骑乘
-      mummified: 木乃伊化
-      no_panties: 开和服，裸体，无内裤
-      nobody_knows: 无人知晓
       normal_on_surface: 被发现？
-      nude: 开和服，裸体，无内裤
-      objectification: 被调教完毕
-      on_recording: 隐藏摄像头，被录
-      one_after_another: 一个接一个
-      one_night_stand: 一夜情
-      ongoing: 进行中
-      oviposition: 产卵
-      ownership_mark: 所有权标记
-      partially_undressed: 半脱
-      pillory: 颈手枷
       probing: 探索
       promotion: 升职
-      provocative_pose: 挑逗姿势
-      public_display: 公开展示
-      public_use: 公共使用
-      puppy_play: 小狗扮演
       recording: 录音
-      remote_controlled: 遥控
-      rope_marks: 绳痕
       speech_bubble: 对话气泡
-      spiked_drink: 下药的饮料
       spooning: 背后抱(汤匙式)
-      spread_eagle: 大字绑
-      st_andrews_cross: 圣安德烈十字架
-      stationary_restraints: 固定束缚
       steam_from_under_covers: 被下热气
-      streaming: 直播
-      tape_bondage: 胶带束缚
-      tentacle_egg: 触手卵
-      tentacle_pit: 触手坑
-      tentacle_sex: 触手性交
-      tentacle_slime: 触手史莱姆
-      tentacles: 触手
       text_message: 短信
-      threat: 服从
       through_wall: 穿墙
-      tied_to_post: 绑在柱子上
-      tied_up: 被绑
       trapped: 被困
-      turtle_shell_bondage: 龟甲缚
       under_clothes: 衣服下
       unworn_clothes: 未穿的衣服
-      used_condom: 用过的避孕套
-      used_condom_on_ass: 屁股上用过的避孕套
-      used_condom_on_floor: 地板上的避孕套
       used_goods: 用过的商品
       used_tissue: 用过的纸巾
-      vacuum_seal: 真空密封
 - name: 画面
   groups:
 
@@ -4973,18 +4408,14 @@
       corrupted: 堕落
       coworker_risk: 同事风险
       destroyed_building: 毁坏的建筑
-      exposed: 暴露
       fallen: 倒下
       footsteps: 脚步声
       gentle: 温柔
       interrupted: 打断
       overtime: 加班
       quick: 快速
-      quickie: 快餐式性爱
       recording: 录制
-      risk_of_discovery: 被发现风险
       rubble: 瓦砾
-      skirt_up: 掀起的裙子
       snowfield: 雪原
       stone_wall: 石墙
       sunlight: 阳光
@@ -5057,7 +4488,6 @@
       imperial_throne_room: 皇宫
       in_bathroom: 在浴室
       laundry: 洗衣房
-      love_hotel: 爱情旅馆
       messy_room: 卧室，凌乱房间
       office: 办公室
       prison_cell: 囚室
@@ -5105,15 +4535,12 @@
       church: 教堂
       shop: 商店
       on_bed: 床上
-      crowded_train: 拥挤的电车
       clothes_on_floor: 地板上的衣服
-      crumpled_sheets: 皱床单
       scattered_clothes: 散落的衣服
       chalkboard: 黑板
       tiled_wall: 瓷砖墙
       shouji: 障子(日式纸门)
       wet_floor: 湿地板
-      train: 列车，拥挤，痴汉
       apartment: 公寓
       apartment_window: 公寓窗户
       hotel: 酒店
@@ -5160,15 +4587,11 @@
       wheelchair: 轮椅
       big_computer_screen: 大电脑屏幕
       coffee_mug: 咖啡杯
-      condom_box: 性爱前，避孕套盒
-      crop: 短鞭，鞭子
       desk: 书桌
       exercise_ball: 健身球
-      glass_dildo: 玻璃假阳具
       heart: 爱心
       id_card: 身份证
       laptop: 笔记本电脑
-      many_used_condoms: 许多用过的避孕套
       massage_table: 按摩床
       mirror: 镜子
       mirror_reflection: 镜中倒影
@@ -5176,12 +4599,7 @@
       phone: 手机
       red_wine: 红酒
       reflection: 镜子，倒影
-      remote_control_vibrator: 遥控振动棒
-      shared_vibrator: 共享震动棒
       smartphone: 智能手机
-      transparent_dildo: 透明假阳具
-      used_condom: 用过的避孕套
-      wand_vibrator: 魔杖振动棒
       window: 窗户
       wine_glass: 酒杯
       sofa: 沙发
@@ -5318,8 +4736,6 @@
       camera: 相机
       gohei: 御币(驱邪布条)
       lantern/lamp: 灯笼
-      whip: 鞭
-      riding_crop: 马鞭
       ofuda: 札符
       cane: 手杖
       wand: 魔杖
@@ -5356,55 +4772,33 @@
       age_difference: 年龄差
       alien_egg: 外星蛋
       androgynous: 中性
-      animal_on_top: 动物上位
-      ass_only: 仅臀部
       audience: 公共，观众
       automated: 自动化
       barcode_tattoo: 条形码纹身
       boss: 老板
-      boy_on_top: 男上位
       bruise: 淤青
-      bulge: 鼓起
       cat_tail: 猫尾
       chat_visible: 聊天可见
       collarbone: 锁骨
-      crumpled_sheets: 皱床单
       feet_only: 仅脚部
       femboy: 伪娘
       flat_breasts: 平胸
       hanging_legs: 悬垂的腿
       height_difference: 身高差
-      hemp_rope: 麻绳
       hetero: 异性
-      huge_penis: 巨根
       huge_size_difference: 巨大体型差
       knot: 打结
       large_breasts: 巨乳
-      large_breasts_small_penis: 巨乳小阴茎
       lower_body_only: 仅下半身
       monstrous: 怪物般
-      morning_after_pill: 紧急避孕药
       multiple_boys: 多男
-      multiple_tentacles: 多触手
       muscular_male: 体型差
       muscular_monster: 肌肉怪物
       natural_state: 自然状态
-      netorare: 寝取
-      penis_and_vagina: 阴茎和阴道
-      pet_bowl: 宠物碗
-      pet_bowl_on_floor: 地板上的宠物碗
       petite_male: 娇小男性
-      phimosis: 包茎
       plastic_wrap: 保鲜膜
-      pregnancy_test: 验孕棒
-      pussy: 小穴
-      pussy_juice_trail: 淫水痕迹
-      red_marks: 鞭痕，红痕
-      red_rope: 红绳
       shower_curtain: 浴帘
       size_difference: 体型差
-      small_penis: 小阴茎
-      small_penis_visible: 可见的小阴茎
       soles: 脚底
       stone_wall: 石墙
       tally_marks: 计数标记
@@ -5413,15 +4807,6 @@
       webcam: 网络摄像头
       ashtray: 烟灰缸
       picture_frame: 相框
-      anal_beads_on_table: 桌上肛门拉珠
-      condom_belt: 避孕套腰带
-      condom_box: 性爱前，避孕套盒
-      dildo_on_floor: 地板上的假阳具
-      many_used_condoms: 许多用过的避孕套
-      sex_toy_nearby: 附近有性玩具
-      vibrator_on_bed: 床上的跳蛋
-      unworn_panties: 未穿内裤
-      pussy_juice_stain: 脸红
       sweat_stain: 汗渍
       ropes: 绳索
       stubble: 茬
@@ -5580,7 +4965,6 @@
       arachnid: 蛛形纲
       insect: 昆虫
       parasite: 寄生虫
-      canine_penis: 犬类阴茎
 
   - name: 植物
     color: rgba(189, 182, 107, .4)
@@ -5646,12 +5030,10 @@
       from_behind_over_shoulder: 从背后过肩
       from_front: 正面
       full_body: 全身
-      instant_loss: 瞬间败北
       low_angle: 低角度
       over_shoulder: 过肩视角
       overhead: 俯视
       pov: 第一人称视角
-      pov_crotch: 第一人称裆部
       pov_hands: 第一人称双手
       shallow_depth_of_field: 浅景深
       soles: 脚底
@@ -5684,12 +5066,8 @@
       between_fingers: (突出)指间
       peeking: 偷窥
       peeking_out: 偷窥(的姿态)
-      peeping: 偷窥(强调视角)
       midriff_peek: 肚脐偷看
       armpit_peek: 腋窝偷看
-      pussy_peek: 浦西偷看
-      panty_peek: 内裤偷看
-      pantyshot: 内裤走光
       caught: 被抓现行
 
   - name: 其他构图
@@ -5697,7 +5075,6 @@
     tags:
       aerial: 空中
       turn_one's_back: 转身
-      upskirt: 裙底视角
       phone_screen: 手机屏幕
       multiple_views: 多视角分解
       mirror selfie: 对镜自拍
@@ -5753,8 +5130,6 @@
       head_tilt: 歪头
       head_down: 低头
       sideways_glance: 轻轻向侧面瞥
-      upshirt: 从衬衫下方瞥
-      upshorts: 从裙底瞥
       looking_at_another: 看着另一个
       looking_at_phone: 看手机
       looking_at_animal: 看着动物
@@ -6338,6 +5713,522 @@
       asian: 亚洲
       faceless_male: 无脸男
       blood: 血
+      abduction: 绑架
+      accidental_exposure: 意外暴露
+      after_fellatio: 口交后
+      after_gangbang: 轮奸后
+      after_sex: 事后
+      afterglow: 事后余韵
+      ahegao: 阿嘿颜
+      all_fours_on_bed: 床上四肢着地
+      anal_beads_on_table: 桌上肛门拉珠
+      anal_sex: 肛交
+      animal_on_top: 动物上位
+      another_round: 再来一轮
+      areola: 乳晕
+      areola_slip: 乳晕滑出
+      areolae_slip: 乳晕滑出
+      aroused_despite_humiliation: 虽辱仍兴奋
+      asphyxiation: 动作线
+      ass_cutout: 露出屁股的服饰
+      ass_grab: 抓着屁股
+      ass_only: 仅臀部
+      ass_visible_through_thighs: 大腿间露臀
+      ball_gag: 口球
+      bare_ass: 露臀
+      before_sex: 性爱前，避孕套盒
+      bell_collar: 铃铛项圈
+      bent_over: 翘臀姿势
+      bikini_aside: 从三点剥开的比基尼
+      bikini_lift: 往上剥开的比基尼
+      bikini_top_removed: 脱下了比基尼上衣
+      bit_gag: 勒住嘴
+      blackmail: 勒索
+      blowjob: 口交
+      bondage_outfit: 束缚装
+      bottomless: 真空
+      bound: 被绑，被束缚
+      bound_by_tentacles: 被触手束缚
+      bound_torso: 缚躯
+      bound_wrists_marks: 缚腕痕
+      boy_on_top: 传教士，男在上
+      boy_standing: 女跪男站
+      bra_pull: 拉胸罩
+      braless: 无胸罩
+      brand: 烙印
+      breast_bondage: 乳房束缚
+      breast_curtains: 乳帘
+      breasts_curtain: 乳帘
+      breasts_out: 乳房露出
+      breasts_squeeze_together: 挤乳
+      breeding: 配种
+      broken_in: 被调教完毕
+      bukkake: 颜射群
+      bulge: 鼓起
+      butt_crack: 股沟
+      butt_crack_cutout: 股沟镂空
+      butt_plug: 肛塞
+      canine_penis: 犬类阴茎
+      casual_nudity: 随意裸体
+      chain_leash: 锁链带牵绳
+      chastity_belt: 贞操带
+      chastity_cage: 贞操锁
+      chikan: 列车，拥挤，痴汉
+      chinese_wedding: 红盖头，裸体，中式婚礼
+      cleft_of_venus: 维纳斯裂口
+      clitoral_hood: 阴蒂包皮
+      clitoris_rings: 阴蒂环
+      cloth_gag: 布口塞
+      clothed_female_nude_male: 穿衣女性裸体男性
+      clothes_lift_by_self: 脱衣，自己掀衣
+      clothes_slip: 衣滑落
+      clothespins: 晾衣夹
+      coercion: 胁迫
+      completely_nude: 全裸
+      condom: 避孕套
+      condom_belt: 避孕套腰带
+      condom_box: 性爱前，避孕套盒
+      condom_in_mouth: 嘴里含避孕套
+      condom_left_inside: 避孕套留在里面
+      condom_wrapper: 避孕套包装
+      convenient_arm: 遮住关键部位的手臂
+      convenient_leg: 挡住关键部位的腿
+      cooperative_fellatio: 协作口交
+      couple_having_sex_inside: 里面的情侣在做爱
+      couple_inside_having_sex: 里面的情侣在做爱
+      covered_nipples: 遮住的乳头
+      covering_ass: 遮着臀部
+      covering_breasts: 遮胸
+      covering_chest_by_hand: 用手遮住胸部
+      covering_crotch: 遮着裆部
+      covering_nipples: 挡住乳头
+      creampie: 中出
+      crop: 短鞭
+      crotch_cut: 开裆
+      crotch_cutout: 胯部镂空
+      crotch_grab: 手抓裆部
+      crotch_tattoo: 胯部纹身
+      crotch_zipper: 胯部拉链
+      crotchless: 开裆
+      crotchless_panties: 开裆内裤
+      crotchless_pants: 无裆裤（紧身）
+      crotchless_pantyhose: 开裆连裤袜
+      crowded: 列车，拥挤，痴汉
+      crowded_train: 拥挤的电车
+      crumpled_sheets: 皱床单
+      cuckold: 绿帽
+      cum_bath: 精液浴
+      cum_bubble: 精液泡泡
+      cum_covered: 沾满精液
+      cum_drip: 精液滴落
+      cum_dump: 精液倾倒
+      cum_in_mouth: 嘴里射精
+      cum_in_pussy: 阴道内射精
+      cum_on_body: 身上精液，脸上精液
+      cum_on_breasts: 胸上射精
+      cum_on_clothes: 精液在衣服上
+      cum_on_face: 脸上射精
+      cum_on_feet: 脚上射精
+      cum_on_hand: 手上精液，精液丝
+      cum_on_sheets: 床单上射精
+      cum_on_soles: 脚底射精
+      cum_overflow: 精液溢出
+      cum_pool: 精液池
+      cum_silk: 精液丝
+      cum_string: 精液丝
+      cum_through_panties: 内裤套阴茎，穿过内裤射精
+      cumdrip: 精液滴落
+      cumdump: 精液垃圾桶
+      dark_anus: 深色肛门
+      dark_nipples: 深色乳头
+      dark_pussy: 深色小穴
+      deep_penetration: 深插
+      degradation: 羞辱贬低
+      detached_collar: 可分离项圈
+      dildo_on_floor: 地板上的假阳具
+      dildo_riding: 骑假阳具
+      dominant: 支配
+      dominatrix: 女王(SM中)
+      double_handjob: 双手手交
+      dress_pull: 剥下裙子胸口的部分
+      drugged: 下药
+      eager_sucking: 急切吮吸
+      economic_dependence: 经济依赖
+      emotionless_sex: 冷漠做爱
+      erect_clitoris: 勃起阴蒂
+      erection: 勃起
+      erection_under_clothes: 衣服下的勃起
+      excessive_cum: 大量精液
+      exhausted_but_willing: 疲惫但愿意
+      exposed: 暴露
+      exposed_chest: 露胸
+      exposed_pussy: 露出阴部
+      expressionless_sex: 无表情性爱
+      face_fucking: 颜面插
+      face_sitting: 坐脸
+      fellatio: 口交
+      female_domination: 女性支配
+      female_orgasm: 绝顶
+      female_pubic_hair: 女性阴毛
+      finger_in_another's_mouth: 口内指交
+      fingering_through_clothes: 手指
+      flaccid: 疲软
+      flashing: 露出
+      flat_chest_grab: 抓着贫乳
+      folded: 抬腿露阴
+      folded_legs: 折腿，M字腿
+      foot_on_crotch: 脚踩裆部
+      foot_on_penis: 脚踩阴茎
+      foot_worship: 足崇拜
+      forced_open_mouth: 被迫张嘴
+      forced_prostitution: 强迫卖淫
+      forced_to_watch: 被迫观看，观众
+      foreskin: 包皮
+      free_use: 免费使用(性奴)
+      frenulum_licking: 舔系带
+      from_behind_grab: 抓他人乳房，从后抓
+      from_reluctant_to_eager: 从不情愿到渴望
+      fucked_silly: 操傻，精神崩溃
+      futa_on_female: 扶她对女性
+      futa_with_futa: 扶她互搞
+      futanari_masturbation: 扶她自慰
+      gagging: 干呕
+      gang_rape: 轮奸
+      gentle_sex: 温柔性爱，暗示
+      gigantic_penis: 超巨根
+      girl_kneeling: 女跪男站
+      girl_pinned: 被压住的女孩
+      glans_licking: 舔龟头
+      glansjob: 龟头手交
+      glass_dildo: 玻璃假阳具
+      glory_hole: 寻欢洞
+      grabbing_another's_ass: 抓着对方屁股
+      grabbing_from_behind: 从背后揉胸|从背后抓住胸部
+      grabbing_own_ass: 抓着自己的屁股
+      grabbing_own_breast: 抓自己胸
+      gradually_undressing: 逐渐脱衣
+      groin: 腹股沟
+      group_blackmail: 集体勒索
+      group_effort: 轮奸，群体行为
+      group_sex: 群交
+      guided_penetration: 抓住男性器插入自己
+      half_inserted: 半插入
+      hand_between_legs: 双腿之间的手
+      hand_on_another's_chest: 手放在对方的胸前
+      hand_on_ass: 手放在屁股上
+      hand_on_breast: 手在胸上
+      hand_on_own_crotch: 手在自己胯部
+      handcuffs: 手铐
+      hands_on_ass: 双手放在屁股上
+      having_sex: 做爱
+      head_grab: 抓头按
+      held_down: 抓头按
+      hemp_rope: 麻绳
+      hidden_camera: 隐藏摄像头
+      hidden_camera_pov: 隐藏摄像头视角
+      holding_condom: 拿着避孕套
+      holding_penis_in_both_hands: 双手握住阴茎
+      holding_vibrator: 拿振动棒
+      holding_whip: 握着鞭子
+      honggaitou: 红盖头，裸体，中式婚礼
+      huge_clitoris: 巨大阴蒂
+      huge_penis: 巨根
+      huge_testicles: 巨大睾丸
+      human_toilet: 人体马桶
+      humping_pillow: 蹭枕头
+      husband_waiting: 丈夫在等
+      hypnosis: 催眠，催眠钟
+      hypnosis_app: 催眠APP，智能手机
+      hypnosis_clock: 催眠，催眠钟
+      hypnotic_pocket_watch: 催眠怀表
+      imminent_penetration: 即将插入，透视缩短
+      implied: 温柔性爱，暗示
+      implied_after_sex: 暗示事后
+      implied_cunnilingus: 暗示的口交
+      implied_fellatio: 暗示口交
+      implied_sex: 隐蔽性爱，暗示性爱
+      in_heat: 发情
+      inserted: 插入
+      inside_slime: 在史莱姆体内
+      instant_loss: 瞬间沦陷，两格，前后对比
+      irrumatio: 颜面插(被动)
+      just_the_tip: 只插头
+      kimono_pull: 剥开和服
+      kinbaku: 紧缚(日式)
+      kissing_penis: 亲吻阴茎
+      kissing_tip: 亲吻龟头
+      kitten_play: 小猫扮演
+      kneeling_in_front: 跪在前面
+      labia_pull: 拉开阴唇
+      large_areolae: 大乳晕
+      large_breasts_small_penis: 巨乳小阴茎
+      large_penis: 大阴茎
+      leg_on_shoulder: 单腿抬起，腿在肩上
+      legs_apart: 两腿分开
+      legs_over_head: 双腿抬过头
+      legs_spread: 腿张开
+      leotard_aside: 把连衣裤裆部剥到一边
+      leotard_pull: 剥开连衣裤
+      licking_feet: 舔脚
+      licking_penis: 舔阴茎
+      licking_testicle: 舔睾丸
+      linked_piercing: 链式穿刺
+      loan_shark: 高利贷
+      locked: 锁住
+      long_nipples: 长乳头
+      long_testicles: 长睾丸
+      lotion_on_breasts: 乳房抹乳液
+      lotion_on_thighs: 大腿抹乳液
+      love_hotel: 爱情旅馆
+      lower_body_exposed: 下半身暴露
+      lowleg: M字摆腿
+      lustful: 淫欲
+      m_legs: M字摆腿
+      maebari/pasties: 阴贴/乳贴
+      male_domination: 男性支配
+      male_ejaculation: 颤抖，男性射精
+      male_fully_covers_female: 男完全覆盖女
+      male_pubic_hair: 男性阴毛
+      male_submission: 男性顺从，颤抖
+      man_on_top: 男在上，男覆盖女
+      many_used_condoms: 许多用过的避孕套
+      masturbating: 自慰
+      masturbator: 自慰器
+      mating_press: 交配压制，男在上
+      mechanical_tentacles: 机械触手
+      milking_machine: 榨乳机
+      mind_break: 精神崩溃
+      mini_penis: 迷你阴茎
+      moaning: 呻吟
+      morning_after_pill: 紧急避孕药
+      mounting: 骑乘
+      multiple_males_serving: 女性支配，多男侍奉
+      multiple_tentacles: 多触手
+      mummified: 木乃伊化
+      mutual_oral: 互口
+      naked: 红盖头，裸体，中式婚礼
+      naked_apron: 裸体围裙
+      naked_cape: 裸体披风
+      naked_cloak: 裸体斗篷
+      naked_coat: 裸体外衣
+      naked_hanfu: 裸体汉服，开袍，无内裤
+      naked_jacket: 裸体夹克
+      naked_kimono: 裸体和服
+      naked_poncho: 裸体斗篷
+      naked_ribbon: 裸体缎带
+      naked_scarf: 裸围巾
+      naked_tabard: 裸体罩袍
+      naked_vest: 裸穿马甲
+      naked_wedding_dress: 裸体婚纱
+      netorare: 寝取
+      nipple_bar: 乳头棒
+      nipple_clamps: 乳头夹
+      nipple_piercings: 乳头穿刺
+      nipple_rings: 乳头环
+      nipples_slip: 乳头滑出
+      nipples_visible: 乳头可见，骆驼趾
+      nipples_visible_through_clothes: 乳头透衣可见
+      no_bra: 裸体围裙，下面真空，无胸罩
+      no_escape: 无处可逃
+      no_panties: 开和服，裸体，无内裤
+      no_pants: 没穿裤子
+      nobody_knows: 无人知晓
+      normal: 正常→被催眠
+      nude: 开和服，裸体，无内裤
+      nude_modeling: 裸体模特
+      obedient: 跪，顺从
+      objectification: 被调教完毕
+      ofuda_on_nipples: 乳头贴符咒
+      ofuda_on_pussy: 阴部贴符咒
+      on_recording: 隐藏摄像头，被录
+      onahole: 飞机杯
+      one_after_another: 一个接一个
+      one_breast_out: 单乳露出
+      one_night_stand: 一夜情
+      ongoing: 进行中
+      open_kimono: 开和服，裸体，无内裤
+      open_pussy_by_self: 自己掰开阴部
+      open_robe: 裸体汉服，开袍，无内裤
+      open_shorts: 开裆短裤
+      oral: 用嘴
+      oral_invitation: 迎接射精而伸出舌头
+      orgasm: 高潮
+      oviposition: 产卵
+      ownership_mark: 所有权标记
+      paddle: 拍板
+      panties_aside: 内裤拨到一边
+      panties_on_penis: 内裤套阴茎，穿过内裤射精
+      panties_peek: 内裤露出
+      panties_pulled: 内裤拉下
+      pants_down: 褪下裤子
+      panty_peek: 内裤偷看
+      panty_shot: 内裤走光
+      pantyshot: 内裤走光
+      partially_undressed: 半脱
+      peeping: 偷窥(强调视角)
+      penis_and_vagina: 阴茎和阴道
+      penis_awe: 对阴茎敬畏，紧张
+      penis_between_feet: 脚间阴茎，脚底挤压
+      penis_grab: 抓着阴茎
+      penis_in_mouth: 阴茎在嘴里
+      penis_on_breasts: 阴茎在乳房上
+      penis_on_face: 阴茎在脸上
+      penis_over_eyes: 阴茎在眼上
+      perpendicular_paizuri: 垂直乳交
+      pet_bowl: 宠物碗
+      pet_bowl_on_floor: 地板上的宠物碗
+      phimosis: 包茎
+      pierced_clitoris: 穿刺阴蒂
+      piledriver: 倒立性交
+      pillory: 颈手枷
+      pink_areolae: 粉色乳晕
+      pinned: 被按住
+      pinning_down: 按住
+      pov_crotch: 第一人称，裆部视角
+      pov_hands_on_head: 第一人称手按头
+      precum: 前列腺液
+      pregnancy_test: 验孕棒
+      presenting: 展示（后接部位）
+      prone_bone: 俯卧后入
+      provocative_pose: 挑逗姿势
+      pubic_tattoo: 阴部纹身
+      public_display: 公开展示
+      public_indecency: 公然猥亵
+      public_use: 公共使用
+      puffy_anus: 肿胀肛门
+      puffy_pussy: 肿胀小穴
+      pulled_by_self: 拉下自己的衣物
+      pulling_anal_beads: 拉出肛门串珠
+      puppy_play: 小狗扮演
+      pussy: 小穴
+      pussy_cut: 小穴开口
+      pussy_gaping: 阴道扩张
+      pussy_juice_pool: 淫水池
+      pussy_juice_stain: 脸红
+      pussy_juice_trail: 淫水痕迹
+      pussy_peek: 浦西偷看
+      pussy_to_pussy: 阴对阴
+      pussy_visible: 小穴可见
+      quickie: 快餐式性爱
+      rape_face: 强奸脸
+      reading_porn_magazine: 看黄书
+      red_ass: 红臀
+      red_marks: 鞭痕，红痕
+      red_rope: 红绳
+      remote_control_vibrator: 遥控振动棒
+      remote_controlled: 遥控
+      revealing_clothes: 暴露衣装
+      reverse_cowgirl_position: 反向骑乘位
+      reverse_doggystyle: 反向后入式
+      reverse_paizuri: 逆向乳交
+      reverse_suspended_congress: 反向悬挂式
+      reverse_upright_straddle: 坐腿上，反向跨坐
+      riding: 骑
+      riding_crop: 马鞭
+      risk_of_discovery: 被发现风险
+      rolled_eyes: 面部特写，阿黑颜，翻白眼
+      rolling_eyes: 翻白眼(高潮眼）
+      rope_marks: 绳痕
+      rough_sex: 粗暴性爱
+      sadistic: 施虐
+      sagging_penis: 事后，垂软阴茎
+      scissoring: 剪刀式(磨镜)
+      self_fondle: 自我抚摸
+      sex_from_behind: 后入，靠墙
+      sex_from_behind_playing_on_screen: 背后做爱边玩手机
+      sex_toy_nearby: 附近有性玩具
+      shackles: 镣铐
+      shaft_licking: 舔阴茎杆
+      shared_vibrator: 共享震动棒
+      side_doggy: 侧躺后入式
+      sideboob: 侧乳
+      sideboobs: 侧乳
+      sitting_on_face: 坐在脸上
+      sitting_on_head: 坐在头上
+      skirt_lift_by_self: 自己掀裙
+      skirt_up: 掀起的裙子
+      skull_fucking: 深喉颜面插
+      slap_mark: 掌印
+      sleep_molestation: 睡奸
+      small_penis: 小阴茎
+      small_penis_visible: 可见的小阴茎
+      soles_squeezing: 脚间阴茎，脚底挤压
+      spank_mark: 挨打印记
+      spanking: 打屁股
+      spiked_collar: 尖刺项圈
+      spiked_drink: 下药的饮料
+      spread legs: 张腿
+      spread_eagle: 大字绑
+      spread_pussy: 掰开小穴
+      squatting,_open_legs: 蹲下分开双腿
+      squirting: 潮喷
+      st_andrews_cross: 圣安德烈十字架
+      standing_missionary: 面对面，站立传教士
+      standing_sex: 精液
+      standing_split,_leg_up: M字摆腿
+      stationary_restraints: 固定束缚
+      stealth_sex: 隐蔽性爱，暗示性爱
+      stepped_on_artificial_vagina: 踩飞机杯
+      straddling: 跨坐
+      strap_slip: 衣物吊带滑落(导致走光)
+      stray_pubic_hair: 散乱阴毛
+      streaming: 直播
+      submissive: 顺从
+      suction_cup_dildo: 吸盘假阳具
+      suspended: 悬吊
+      suspended_congress: 动作线
+      swimsuit_aside: 把泳衣的裆部挪到一边
+      swimsuit_pull: 扯下泳衣
+      tail_plug: 尾巴肛塞
+      taken_advantage_of: 被趁虚而入
+      tape_bondage: 胶带束缚
+      tape_on_pussy: 阴部贴胶带
+      tape_over_mouth: 嘴上贴胶带
+      tentacle_egg: 触手卵
+      tentacle_pit: 触手坑
+      tentacle_sex: 触手性交
+      tentacle_slime: 触手史莱姆
+      tentacles: 触手
+      thighs_squeezing_penis: 女上位，大腿夹阴茎
+      threat: 服从
+      throat_bulge: 喉咙鼓起
+      throat_fucking: 喉咙插
+      tied_to_post: 绑在柱子上
+      tied_up: 被绑
+      tiny_penis: 微小阴茎
+      top-down_bottom-up: 趴着翘臀
+      topless: 露胸
+      torogao: 失神脸(とろ顔)
+      touching_self: 自摸
+      train: 列车，拥挤，痴汉
+      trampling: 踩踏
+      transparent_dildo: 透明假阳具
+      turtle_shell_bondage: 龟甲缚
+      underboob: 下乳
+      underboob_cutout: 下乳镂空
+      underwear_held_up: 举着内衣
+      unworn_panties: 未穿内裤
+      upright_straddle: 对坐体位
+      upshirt: 从衬衫下方瞥
+      upshorts: 从裙底瞥
+      upskirt: 裙底视角
+      urethra: 尿道
+      used_condom: 用过的避孕套
+      used_condom_belt: 用过的避孕套腰带
+      used_condom_on_ass: 屁股上用过的避孕套
+      used_condom_on_floor: 地板上的避孕套
+      vacuum_seal: 真空密封
+      veiny_penis: 青筋阴茎
+      very_big_penis: 非常大阴茎
+      vibrator_on_bed: 床上的跳蛋
+      vomiting_cum: 吐出精液
+      wand_vibrator: 魔杖振动棒
+      watching_porn: 看黄片
+      whip: 鞭
+      whip_marks: 鞭痕，红痕
+      white_breast_curtain: 白色乳帘
+      wince: 皱眉蹙额(性交前)
+      woman_hypnotized_lewd: 旋涡眼，被催眠淫荡
 - name: Prompt Studio
   groups:
 
